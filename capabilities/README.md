@@ -1,0 +1,1 @@
+One subfolder per capability (e.g. `marginal-analysis/`, `fx-hedging/`). Each capability folder holds a `README.md` (what the capability is and which engagements exercised it), a `spec.md` (the method — model design, named ranges, formula logic), and the working model file. New subfolders are added as coursework introduces new capabilities.
