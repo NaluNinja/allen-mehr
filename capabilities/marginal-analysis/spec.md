@@ -141,6 +141,10 @@ The exponential term is the diminishing-returns engine: each additional bed make
 crop slightly more labor-hungry. This function is used in two independent places — the mix on
 `Mix`, and the standalone schedules on `MC Schedules` — with different `q` arguments.
 
+`LABOR_HRS(c, q)` is **function notation for readability, not an Excel construct** — a named range
+cannot take arguments. It is implemented as an inline formula everywhere it appears, referencing the
+named inputs for that crop and the `q` appropriate to that location.
+
 ### 3.2 Farm labor build-up (`Mix`)
 
 ```
@@ -154,11 +158,21 @@ temp_hrs_used        = mix_hrs_total - perm_hrs_used
 temp_workers_needed  = temp_hrs_used / temp_hrs_each
 
 labor_cost_total     = perm_hrs_used * farmer_wage + temp_hrs_used * temp_wage
-labor_rate_blended   = labor_cost_total / mix_hrs_total
+labor_rate_blended   = IF(mix_hrs_total = 0, 0, labor_cost_total / mix_hrs_total)
 ```
 
 **The farmer's 720 field hours are consumed before any temporary hours.** The ordering is a stated
 costing convention of the case, not an optimization the model performs.
+
+**The farmer is charged to the crops only for the field hours actually used**, not for her full
+salary. She is paid $50,000 regardless of what is planted, so charging her field time to crops is an
+opportunity-cost choice rather than a cash-accounting one: those hours could have gone elsewhere,
+and the model prices them accordingly. On a mix that uses fewer than 720 hours, permanent labor cost
+is therefore below $25,000.
+
+The guard on `labor_rate_blended` exists because Solver is started from a `0 / 0 / 0` mix, where
+`mix_hrs_total` is zero. Without it the model returns `#DIV/0!` on the first required run and fails
+its own "no error cells" criterion.
 
 ### 3.3 Season P&L (`Mix`)
 
@@ -196,7 +210,9 @@ sched_tc(c,q)         = sched_vc(c,q) + fixed_costs
 ```
 
 The schedule applies the same perm-hours-first rule as the farm, so it reports what the next bed
-would cost *this* farm rather than a generic one.
+would cost *this* farm rather than a generic one. Each standalone schedule assumes the farmer's
+**full** 720 field hours are available to that crop, since the question it answers is what the farm
+would look like growing that crop alone.
 
 ```
 MC(c,q)   = sched_vc(c,q) - sched_vc(c,q-1)        for q >= 1
@@ -215,11 +231,21 @@ this row would violate the "no error cells" criterion in Component 4.
 
 ### 3.5 Standalone P = MC crossing
 
-For each crop, report the largest `q` at which `MC(c,q) <= c_crop_price`.
+For each crop, report the **first upward crossing**: the largest `q` such that
+`MC(c, j) <= c_crop_price` holds for **every** `j` from 1 to `q`.
 
-Marginal cost is **not assumed to rise monotonically**. If MC falls at any point in a schedule, the
-bed number where it happens is recorded as an observation in the audit findings. Locating it is in
-scope for this stage; explaining it is not.
+```
+crossing(c) = the largest q with MC(c,j) <= c_crop_price for all j <= q
+```
+
+**This is not the same as "the largest `q` where `MC <= price`,"** and the difference is not
+cosmetic. Marginal cost in this model is **not monotonic**: in at least one schedule MC rises past
+the price, then falls back below it and remains there to the cap. A "largest q" rule picks up that
+second region and reports the cap instead of the crossing — for two of the three crops it returns
+20 and 30 against published values of ~10 and ~6.
+
+Any point where MC **falls** rather than rises is recorded in the audit findings as a bed number
+only. Locating it is in scope for this stage; explaining it is not.
 
 ## 4. Validation Rules
 
@@ -244,6 +270,9 @@ reproduces `q = 1` exactly — the second anchor is what catches it.
 | Season profit | $42,762 | within $1 |
 | Standalone P ≈ MC crossings | tomato ~10 · carrot ~10 · mesclun ~6 | ±1 bed |
 
+Under the definition in §3.5 this specification yields exactly 10 / 10 / 6. A result of 10 / 20 / 30
+is the signature of the "largest q" misreading, not a modeling difference.
+
 A profit outside the $1 band is a defect to be traced, not a rounding difference to be absorbed.
 
 ### 4.3 Structural checks
@@ -257,6 +286,11 @@ A profit outside the $1 band is a defect to be traced, not a rounding difference
 - `farmer_hrs_field * farmer_wage` = $25,000 — half the farmer's salary, confirming the wage
   denominator is 1,440 and not 720.
 - `SUM of c_labor_cost` = `labor_cost_total` — confirms the blended allocation conserves dollars.
+- No `ROUND()`, `ROUNDUP()`, `ROUNDDOWN()`, or truncation appears in any calculation. Rounding is
+  display formatting only. A truncated intermediate compounds through every downstream
+  multiplication; the sheet carries full precision and the number format controls what is shown.
+- A constraint is reported **binding** when `used >= limit - 0.0001`, and slack otherwise. Exact
+  floating-point equality is never relied on.
 
 ### 4.4 Solver runs
 
@@ -303,6 +337,11 @@ Beds, labor hours, revenue, fertilizer cost, allocated labor cost, contribution.
 One row per constraint: the limit, the amount used, and whether it is **binding or slack**. For each
 bed cap, also the **marginal profit of one additional bed** if the cap were relaxed by one.
 
+That figure is produced by **re-solving**: raise the one cap by a single bed, re-run Solver from the
+optimum, and take the difference in `season_profit`. It is not read off the MC schedule. Relaxing a
+cap lets the entire mix re-optimize, and the honest answer to "what is one more bed worth" has to
+include that adjustment.
+
 This block exists because the Stage 1 brief made a specific claim about which constraints bind. The
 model reports the status as a value; what the values mean is Stage 3's work, not this stage's.
 
@@ -314,7 +353,9 @@ location only.
 
 ### 5.7 Charts
 
-Marginal cost against price, one per crop, exportable for `analysis/figures/` in Stage 3.
+One chart per crop: `q` (beds, 0 to that crop's cap) on the x-axis; two series on the y-axis in
+dollars per bed — `MC(c,q)` and a flat line at `c_crop_price`. Charts read from `MC Schedules` and
+must not reference the mix. Exportable for `analysis/figures/` in Stage 3.
 
 ## Audit Findings
 
