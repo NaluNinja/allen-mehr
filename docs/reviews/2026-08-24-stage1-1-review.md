@@ -1,27 +1,39 @@
 <!-- PR TARGET: https://github.com/NaluNinja/allen-mehr | Stage 1.1 (2.5 pts) -->
-# Stage 1.1 review — engagement brief · **92 / 100** (A-) · 2.30 / 2.5 pts
+# Stage 1.1 review — engagement brief · **97 / 100** (A+) · 2.43 / 2.5 pts
 
 **Brief:** [`docs/briefs/perfect-competition-brief.md`](https://github.com/NaluNinja/allen-mehr/blob/main/docs/briefs/perfect-competition-brief.md)
 
+> Re-graded 2026-08-27. Your previous score was 92. The five points were all in one place — no "how I would know I was wrong" section — and you did not just add one, you added the constraint analysis underneath it. This is now the strongest brief in the cohort after Day's.
+
 | Criterion | Earned | Notes |
 |---|---|---|
-| Problem restated in your own voice | 27 / 30 | Clean and genuinely restated rather than paraphrased. You lead with the price-taking constraint — "It cannot control what customers pay, so its decision is limited to choosing the crop mix" — which is the fact the whole case turns on. The small gap is that you name the resources without saying which one you expect to bind; the constraint that stops you is the interesting part. |
-| Hypothesis names a specific mix | 25 / 25 | About 10 tomato / 20 carrot / 30 mesclun. Specific, committed, and you say what happens to the leftover four beds. |
-| Economic mechanism | 25 / 25 | This is the best short mechanism in the cohort. You name the driver (labor need rising faster per tomato bed), the test (the next bed costing more than its $8,800 price), and then the sentence that earns the full mark: the four beds go unused "not because the farm runs out of workers, but because the remaining available tomato beds are no longer worth planting." That is exactly the distinction between a binding resource constraint and P = MC, and most of this cohort will not make it until Stage 3. |
-| Falsifiability and process | 15 / 20 | Your prediction is sharply checkable — 10 beds, four idle, for a stated reason — so it is falsifiable in substance. But your brief has no "how I would know I was wrong" section, and writing it down is what makes the Stage 3 comparison mechanical rather than a matter of memory. Brief committed 2026-08-23 with no modeling work before it. Correct path. |
-| **Final** | **92 / 100** | earned on merit |
+| Problem restated in your own voice | 27 / 30 | Unchanged and still clean. You lead with the price-taking constraint — "It cannot control what customers pay, so its decision is limited to choosing the crop mix" — which is the fact that makes this a perfect-competition case rather than a pricing one. The three points off are the same as before: the statement is efficient to the point of being spare. You name the caps as "a maximum number of beds" without giving the numbers, and the 36-week season and the $20,000 appear as "fixed seasonal costs" rather than as figures. A reader who has not read the case cannot reconstruct the problem from your paragraph. |
+| Hypothesis names a specific mix | 25 / 25 | About 10 tomato, 20 carrot, 30 mesclun. Specific, committed, and you say what happens to the leftover four beds rather than letting them go unmentioned. |
+| Economic mechanism | 25 / 25 | Still the best short mechanism in the cohort, and the new constraint section deepens it. You name the driver, the test, and then the sentence that earns the full mark: the four idle beds are idle because the eleventh tomato bed costs more than $8,800, not because the farm ran out of land or hours. Distinguishing "stopped by a constraint" from "stopped by economics" is the central distinction in this case and you are the only person who wrote it down before building anything. |
+| Falsifiability and process | 20 / 20 | Three named outcomes, each tied to the specific assumption it would break, and one of them is aimed at your own central claim rather than at a detail: "All 64 beds are planted, or the labor hours are used up... then land or labor is what stops the farm after all, and my explanation is wrong." Writing the test that could take down your own thesis is the hard version of this criterion and it is the one that earns full marks. The brief is at the correct path, the revision is dated and attributed in the file itself, the AI session is logged, and the whole thing predates your spec by a day — the order this stage requires. |
+| **Final** | **97 / 100** | earned on merit |
 
-### What I'd fix first
+### What the new sections added
 
-- Add a short "How I would know I was wrong" section. You are most of the way there already — the material is in your hypothesis. Turn it into named outcomes: tomatoes reaching their 20-bed cap would mean the labor penalty is milder than you think; carrots or mesclun finishing below their caps would mean something other than diminishing returns is binding first. Three bullets, ten minutes, and Stage 3 gets much easier.
+The "Which Constraint I Expect to Bind" section is the piece of work here, and it is worth saying why rather than just marking it correct.
 
-- One sentence on which constraint you expect to bind. You have 64 beds, caps of 20/20/30 that sum to 70, and up to 6,480 labor hours. Say which of those you think actually stops the farm. Your own hypothesis implies the answer — you predict four idle beds, so you are saying land does not bind and labor does not bind, and economics stops you instead. Making that explicit is worth doing because it is a strong, checkable claim.
+Most briefs in this cohort predict a mix. Yours predicts a mix and then asks the second question: what is it that stops the farm? You then rule out land (60 of 64 beds planted, so space was still available), rule out labor (hours still left over when planting stops), and conclude that the only thing left is economics. That is an argument by elimination over the three candidate binding constraints, and it is exactly how a decision memo should be structured.
 
-### Looking ahead to Stage 2
+You also split the crops correctly: tomatoes stop on price, carrots and mesclun stop on their caps, and you say what would happen if the caps were raised. That last point is the shadow-price question, and it is a Stage 3 deliverable that you have already framed.
 
-Your brief is now frozen. If the model disagrees with it, do not go back and edit this file — the gap between prediction and result is the raw material for Stage 3, and it is worth more than being right.
+### One thing to be careful about, and it matters for Stage 3
 
-Stage 2's deliverable is a spec in capabilities/marginal-analysis/ before the workbook exists, plus an audit of what the AI builds from it. The reasoning in your brief is exactly the reasoning that spec needs.
+Your brief says you expect "about 5,277 of the 6,480 available hours" to be used. The published check figures are available to everyone and using them is not against the rules, so this costs you nothing here. But a prediction quoted to four significant figures from the answer key is not really a prediction, and Stage 3 is where that becomes a problem: it asks you to compare what you expected against what your model found, and "I expected 5,277 hours and got 5,277 hours" is not a comparison, it is a tautology.
+
+The parts of your brief that are genuinely yours — the elimination argument, the claim that four beds sit idle for economic rather than physical reasons, the three falsification conditions — are not in the check figures and cannot be read off them. Those are what Stage 3 should be built on. When you write that memo, be explicit about which of your predictions were reasoned and which were taken from the published figures. Saying so plainly will be worth more than a memo that blurs the two, and a reviewer will notice the difference whether or not you point it out.
+
+For the record, the mechanism you gave for the tomato stopping point is right, and it is right for reasons the check figures do not supply. That is the part to defend.
+
+### Where this leaves you
+
+Your Stage 1.2 spec is graded separately and it is one of the two strongest in the cohort. The connection between the two documents is the thing to protect: your spec's §5.5 says the constraint-status block "exists because the Stage 1 brief made a specific claim about which constraints bind." That is a spec written to test a hypothesis rather than to produce an answer, and it is the whole architecture of this project working as intended.
+
+One standing rule from here on: do not revise this brief to match what the model tells you. If the model contradicts it, that is a finding. Stage 3 asks you to explain the gap, and a brief quietly edited to be right afterwards has nothing left to explain.
 
 ---
 
