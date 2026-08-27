@@ -7,6 +7,7 @@ A running record of AI sessions that mattered — not every prompt, but the ones
 | 2026-08-16 | Claude | Scaffolded portfolio repository structure (README, RESUME, AGENTS, CLAUDE, .gitignore, folder placeholders) per course setup guide | Files drafted for review before committing |
 | 2026-08-19 | Claude | Drafted BIO.md (150–200 word bio) per onboarding checklist, using RESUME.md as source material | Draft written for review before committing |
 | 2026-08-22 | Claude | Attacked my Stage 1 hypothesis for the perfect-competition case (docs/briefs/perfect-competition-brief.md) — I drafted the problem statement and hypothesis myself; asked the model to name unsupported claims, contradictions, and check labor-hour feasibility against the case's own formula, without rewriting my text | Went through three hypothesis drafts. Caught: (1) reasoning that contradicted my own bed-count numbers, (2) a mix that exceeded the total labor-hour budget by ~1,250 hours, (3) a claim that "not enough worker hours" caused unplanted beds when my own numbers showed labor slack. Final version attributes the tomato stop to marginal cost crossing price, not a labor shortage. |
+| 2026-08-26 | Claude | Acted on instructor feedback: add one-line README files for `analysis/`, `docs/`, and a new `capabilities/marginal-analysis/` so each folder explains what it holds instead of showing a bare path on GitHub | Three READMEs drafted, reviewed, and committed (a647710); Stage 1 brief deliberately left untouched, since Stage 3 compares it against the Stage 2 model |
 
 ## Reflection
 
