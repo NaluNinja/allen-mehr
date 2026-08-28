@@ -27,3 +27,16 @@ One important part of this process was finding the labor formula in the case ins
 My first idea had problems. The numbers did not match my explanation of which crop would receive the most space, and one proposed mix required more labor hours than the farm could provide. I revised the prediction to 10 tomato beds, 20 carrot beds, and 30 mesclun beds. I then checked that these total 60 beds, which is below the 64-bed limit, and reviewed the estimated labor requirement of about 5,277 hours against the 6,480 hours available from the farmer and up to four temporary workers.
 
 I also corrected my explanation of mesclun. Carrots have the lower starting labor requirement, but mesclun’s labor needs increase more slowly as more beds are added. I understand that this is still only a hypothesis, and the spreadsheet model will test whether these predicted bed counts are actually the best choice.
+
+## Reflection 1.2
+I came into this project with very little background in accounting, economics, or Excel Solver. I used the professor’s GitHub resources, the Perfect Competition Model website, and AI to help me understand the concepts, work through my hypothesis, and build the model.
+
+There were three build attempts. The first stopped before any cells were written because it found an ambiguity in my own specification. Section 4.4 did not clearly identify the relevant actor. It would have been easy to answer the question in chat and move forward, but then the model would have been based on an assumption not written in my specification. Instead, I updated the specification before proceeding.
+
+The second attempt ran to completion and initially looked successful. However, when I reviewed it, I found that the summary did not accurately report its own data. It reported marginal-cost dips at beds 6, 17, and 14. The flag column showed dips at bed 6, beds 17 and 18, and beds 14 and 15. The summary missed the second dip for both carrot and mesclun.
+
+I could have typed the missing bed numbers into the summary cell, but then the displayed result would not have come from the model itself. I found other issues in that version as well, so I discarded the completed workbook rather than patching it. The third attempt was rebuilt from scratch and became the submitted version.
+
+The final model matched check figures already included in the specification. That was reassuring, but it was not independent validation because the builder knew the target values before creating the workbook. I would still want to compare the results with Farm Profit Lab or another method.
+
+The main lesson was that AI helped me build much more than I could have alone, but I still had to verify that the output actually matched the model.
