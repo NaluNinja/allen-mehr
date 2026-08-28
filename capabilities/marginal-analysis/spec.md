@@ -301,6 +301,11 @@ discarded.
 Configuration: GRG Nonlinear, objective `season_profit` maximized, changing cells the three
 `*_crop_beds`, decisions constrained to integers, plus the constraints in Component 2.
 
+Solver is operated by the analyst, not by the build tool. The workbook is delivered with the three
+decision cells at `0 / 0 / 0` and the §5.5 marginal-profit column empty. The builder writes the
+Solver configuration and both starting points into the README so the runs are reproducible. No
+optimum, and no re-solve result, is typed into the workbook by the builder.
+
 ### 4.5 Independent cross-check
 
 Mid-model values — not only the final profit — are compared against the Farm Profit Lab reference
