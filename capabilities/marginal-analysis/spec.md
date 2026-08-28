@@ -100,7 +100,9 @@ The workbook has five sheets.
 ### The MC Schedules sheet must be independent of the mix
 
 Each crop's schedule answers a standalone question: *if this were the only crop grown, what would
-the marginal cost of the q-th bed be?* Each row therefore takes its `q` from **its own row index**.
+the marginal cost of the q-th bed be?* Each row therefore takes its `q` from **its own row index** —
+derived by formula from the row's position, never typed as a constant. The block spans `q = 0` to
+that crop's `_cap`.
 
 No formula on `MC Schedules` may reference `tomato_crop_beds`, `carrot_crop_beds`, or
 `mesclun_crop_beds`. If it does, the schedules shift every time Solver moves the mix, the reported
@@ -353,14 +355,16 @@ model reports the status as a value; what the values mean is Stage 3's work, not
 ### 5.6 Marginal-cost schedules
 
 Per crop, `q = 0` to cap: labor hours, variable cost, MC, AVC, ATC. Plus the standalone P = MC
-crossing, and the bed number of any point where MC **falls** rather than rises — recorded as a
-location only.
+crossing, and **every** bed at which MC **falls** rather than rises — all of them, not only the
+earliest; a crop may have more than one. Recorded as locations only. The summary block lists every
+such bed per crop; a per-row flag column alone does not satisfy this.
 
 ### 5.7 Charts
 
-One chart per crop: `q` (beds, 0 to that crop's cap) on the x-axis; two series on the y-axis in
-dollars per bed — `MC(c,q)` and a flat line at `c_crop_price`. Charts read from `MC Schedules` and
-must not reference the mix. Exportable for `analysis/figures/` in Stage 3.
+One chart per crop: `q` (beds, 1 to that crop's cap) on the x-axis — the series starts at `q = 1`
+because MC is undefined at `q = 0` (§3.4); two series on the y-axis in dollars per bed — `MC(c,q)`
+and a flat line at `c_crop_price`. Charts read from `MC Schedules` and must not reference the mix.
+Exportable for `analysis/figures/` in Stage 3.
 
 ## Audit Findings
 
