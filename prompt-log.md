@@ -37,6 +37,6 @@ The second attempt ran to completion and initially looked successful. However, w
 
 I could have typed the missing bed numbers into the summary cell, but then the displayed result would not have come from the model itself. I found other issues in that version as well, so I discarded the completed workbook rather than patching it. The third attempt was rebuilt from scratch and became the submitted version.
 
-The final model matched check figures already included in the specification. That was reassuring, but it was not independent validation because the builder knew the target values before creating the workbook. I would still want to compare the results with Farm Profit Lab or another method.
+The final model matched check figures already included in the specification. That was reassuring, but it was not independent validation because the builder knew the target values before creating the workbook.
 
 The main lesson was that AI helped me build much more than I could have alone, but I still had to verify that the output actually matched the model.
