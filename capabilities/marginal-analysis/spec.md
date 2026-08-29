@@ -368,7 +368,66 @@ Exportable for `analysis/figures/` in Stage 3.
 
 ## Audit Findings
 
-_(written after the workbook is built)_
+### Check 1 — Hand-calculated labor anchors
+
+What I checked. I independently calculated the tomato labor-hours schedule at q = 1 and q = 10, then compared the results with MC Schedules!D7 and MC Schedules!D16:
+
+    1 × 2.50 × 36 × 1.10^1 = 99.0
+
+    10 × 2.50 × 36 × 1.10^10 = 2,334.368214
+
+What I found. The workbook returned 99.0 labor hours at q = 1 and 2,334.368214 labor hours at q = 10, matching both independent calculations.
+
+What I did. I accepted the labor-hours schedule after verifying both anchors. The q = 10 anchor was necessary because a defective flat-growth formula using (1 + dim) rather than compounding by q would still return 99.0 at q = 1, but would return only 990.0 at q = 10 rather than 2,334.368214. This check would have caught a missing or incorrectly applied compounding exponent.
+
+### Check 2 — Independent Farm Profit Lab reconciliation
+
+What I checked. I compared 712 workbook values with the Farm Profit Lab’s independent farmlab.js implementation. The Lab uses a separate language, enumerates all 13,671 integer crop combinations in the cap ranges, and then filters them for feasibility; it was not consulted during workbook construction. The 712 comparisons consisted of 12 values at the optimum mix and 700 marginal-cost-schedule values: every row across 10 columns for all three schedules. I separately compared the optimum profit, four cap re-solves, and the three MC-fall location sets.
+
+What I found. There were zero disagreements among the 712 direct value comparisons, with a maximum absolute difference of 5.8e-11. At the optimum mix of 10 tomato beds, 20 carrot beds, and 30 mesclun beds, the Lab returned:
+
+- Tomato labor hours: 2,334.368214
+- Carrot labor hours: 983.169864
+- Mesclun labor hours: 1,959.678036
+- Total labor hours: 5,277.216114
+- Permanent labor hours: 720
+- Temporary labor hours: 4,557.216114
+- Temporary workers: 3.164733
+- Labor cost: $104,118.34
+
+The Lab’s independent optimum was 10 / 20 / 30 with profit of $42,761.66. The optimum profit, all four cap re-solves, and the MC-fall location sets also agreed with the workbook.
+
+The cross-check showed that the recorded shadow prices of $352.50 and $246.48 were derived from Solver’s displayed two-decimal profit outputs. The exact values are $352.494754 and $246.473799. Using exact values, raising all three caps together produces $598.968554, while the three separate effects sum to $598.968553. The apparent one-cent separability difference is therefore a rounding effect, not a modeling difference.
+
+What I did. I left the workbook’s Mix!L8 and Mix!L9 entries as the two-decimal figures produced from the Solver re-solves and recorded the exact values here to explain the separability result. This check would have caught transcription errors, incorrect formulas, omitted constraints, incorrect marginal-cost schedules, incorrect enumeration or feasibility logic, or a workbook that only agreed with the published target values because those targets were known during construction. It does not independently test the per-crop labor-allocation presentation in Mix!B27:E28; that block is supported by its internal SUM = labor_cost_total control.
+
+### Check 3 — Solver starting-point robustness
+
+What I checked. I ran GRG Nonlinear with the integer requirement from two distinct starting points: 0 / 0 / 0 and 20 / 0 / 0.
+
+What I found. Both runs reached the identical solution of 10 / 20 / 30 with profit of $42,761.66. Both Solver reports stated: “found a solution, all constraints and optimality conditions are satisfied,” rather than the weaker “converged to the current solution.”
+
+What I did. I treated the reported optimum as robust to these starting conditions. This check would have caught path dependence, convergence to different local solutions, or an optimization setup whose result changed materially with initialization.
+
+### Check 4 — Published acceptance criteria
+
+What I checked. I compared the workbook outputs with the §4.2 acceptance criteria.
+
+What I found. The crop mix was exactly 10 / 20 / 30. Profit was $42,761.66 against the stated $42,762 target, within the permitted $1 tolerance. The standalone crossings were 10, 10, and 6, matching the expected approximate crossings of 10, 10, and 6.
+
+What I did. I documented that the workbook satisfies the published acceptance checks while treating them as confirmation rather than independent validation. This check would have caught failure to meet the assignment’s required output values or tolerance bands, but it would not by itself have detected a model designed around the published target values.
+
+### Check 5 — Formula integrity and workbook controls
+
+What I checked. I audited the workbook for formula errors, rounding or truncation functions, direct cell-address references, prohibited crop-bed references on MC Schedules, naming consistency, and the constraint-control cells.
+
+What I found. The workbook contained zero error cells; zero uses of ROUND, TRUNC, or INT; zero direct cell-address references across 1,039 formulas; and zero references to *_crop_beds on MC Schedules. There were 103 non-Solver defined names, all lowercase; the 59 additional solver_* names were Excel Solver entries. Constraint cells K6:K10 all returned PASS.
+
+What I did. I accepted the workbook’s formula-control structure and preserved the named-range approach. This check would have caught pasted or hard-coded outputs, hidden rounding that could alter optimization or threshold results, brittle direct-address dependencies, prohibited schedule inputs, inconsistent user-defined naming, and explicit constraint failures.
+
+### Marginal-cost fall locations
+
+I recorded the requested locations without interpreting their causes: tomato marginal cost falls at bed 6; carrot marginal cost falls at beds 17 and 18; and mesclun marginal cost falls at beds 14 and 15. Explanation of those locations is reserved for Stage 3.
 
 ---
 
