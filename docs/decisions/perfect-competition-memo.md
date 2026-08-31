@@ -1,5 +1,10 @@
 # Perfect Competition Decision Memo
 
+**To:** Farm manager  
+**Purpose:** Recommend the profit-maximizing planting plan under current prices, labor conditions, and crop caps.
+
+---
+
 ## Decision
 
 The plan is to plant 10 beds of tomatoes, 20 beds of carrots, and 30 beds of mesclun. It uses 60 of the farm’s 64 beds and produces seasonal profit of approximately $42,761. Tomatoes stop at 10 beds because the marginal cost of bed 11 exceeds the tomato price. Carrots and mesclun stop at their production caps even though their marginal costs remain below price.

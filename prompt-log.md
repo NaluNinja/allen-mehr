@@ -41,3 +41,12 @@ I could have typed the missing bed numbers into the summary cell, but then the d
 The final model matched check figures already included in the specification. That was reassuring, but it was not independent validation because the builder knew the target values before creating the workbook.
 
 The main lesson was that AI helped me build much more than I could have alone, but I still had to verify that the output actually matched the model.
+
+## Stage 3 Reflection
+I approached verification as more than checking whether the model gave an answer that looked reasonable. I wanted to make sure the numbers matched the calculations and that the explanations in my write-up actually fit what the model showed.
+
+One example involved the carrot marginal-cost result at 20 beds. My draft listed the marginal cost as $1,688.96 and stated that it was $405.05 below the $2,094 carrot price. I checked the subtraction myself: $2,094 minus $1,688.96 equals $405.04, not $405.05. I went back to the workbook to see whether the marginal-cost number or the stated difference was wrong. The workbook showed $1,688.95, which makes the $405.05 difference correct. Although the difference was only one cent, it mattered because the conclusion depends on whether the carrot cap stops production before marginal cost reaches the selling price.
+
+I also looked more closely at the drop in tomato marginal cost at bed 6. For tomatoes, the timing fit the explanation that the farmer had reached the 720-hour limit and the added work shifted to lower-cost temporary labor. I then checked whether that same explanation fit the drops in carrot and mesclun marginal cost but this didn't appear to be the case. The carrot and mesclun patterns did not occur at the same labor transition, so I decided not to claim that one explanation accounted for every drop in marginal cost.
+
+This process changed how I read model results. A pattern in the numbers may be real, but that does not automatically prove why it occurred. Going forward, I will check the math and make sure the explanation fits the full set of results before presenting it as a conclusion. This was an incredible learning opportunity and my mind was truly blown.
