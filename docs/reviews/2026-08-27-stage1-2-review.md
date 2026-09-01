@@ -1,7 +1,7 @@
 <!-- PR TARGET: https://github.com/NaluNinja/allen-mehr | Stage 1.2 (8 pts) -->
 # Stage 1.2 review — spec, build, audit
 
-**You scored 100 out of 100 (A+) — the full points for this stage. This score is entered.**
+**You scored 100 out of 100 (A+) — the full 15 points for this stage. This score is entered.**
 
 **Spec:** [`capabilities/marginal-analysis/spec.md`](https://github.com/NaluNinja/allen-mehr/blob/main/capabilities/marginal-analysis/spec.md)
 
@@ -44,6 +44,14 @@ You also correctly treated the published check figures as confirmation rather th
 Your workbook is finished and your analysis and memo are already committed, which puts you well ahead. The risk that comes with being ahead on this particular case is specific: your Stage 1.1 brief predicted a mix, the model returned one, and Stage 3 grades the honesty of the comparison between them rather than the accuracy of the prediction.
 
 Do not smooth that comparison. If your brief and your model disagree anywhere — the mix, the binding constraint, where the crossing sits — the gap is the finding, and it is worth more than agreement would be. You have the prompt log and the commit history to prove what you believed beforehand, which most of this cohort will not.
+
+### A note on the point value, new as of today
+
+This stage is now worth **15 points** rather than the 8 in the stage brief, and **Stage 1.3** — the analysis, the memo, and the prompt log — is now worth **15** as well. Cases 2 and 3 have been dropped for this cohort, so Case 1 *is* the case.
+
+In practice: this stage and the next one are together worth **30 of the 35 points** on the case. Stage 0 and Stage 1.1 are 2.5 each. The weight has moved onto the build and the analysis, which is where the work actually is.
+
+Nothing about the grading changes — the score is still out of 100 and converted at the end. The stage brief and the case page still show the old numbers; they have not been updated yet.
 
 ---
 
