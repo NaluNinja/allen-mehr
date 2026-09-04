@@ -59,3 +59,7 @@ Tomatoes should not be included in the “grow at a loss” category. Tomato pro
 The Stage 1 expectation that the farm would not exhaust total labor capacity was somewhat correct, but incomplete. The earlier reference to approximately 5,277 labor hours was a published check figure rather than an independently generated prediction, so matching it should not be treated as confirmation of a forecast.
 
 The more useful finding is that aggregate slack hides a binding lower-level allocation. Although the farm does not use all 6,480 available labor hours, it does use all 720 of the farmer’s field hours. Of the 5,277 total hours used in the optimized plan, temporary workers provide the remaining 4,557 hours. This distinction helps explain both the optimal crop mix and the dips in tomato marginal cost. The model therefore supports the broader conclusion that the farm is not constrained by total beds or total labor alone, while correcting the earlier assumption that “labor slack” completely described the relevant operational constraint.
+
+---
+
+_Structural review with Claude (2026-08-30); the model applied spelling and formatting fixes, all prose is mine. See [prompt-log.md](../prompt-log.md)._

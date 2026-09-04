@@ -24,3 +24,7 @@ Tomatoes stop at 10 beds for prices between $8,248.59 and $9,390.72. Below $8,24
 Stage 1 predictions about which constraints would matter were reasoned from the model’s structure. In contrast, the 5,277-hour labor total was a published check figure used for validation, not an independently generated forecast. The core conclusion remains sound because it rests on the qualitative finding that labor was slack when planting stopped, not on that precise total.
 
 Matching known check figures is confirmation rather than independent validation. The per-crop labor block in `Mix!B27:E28` was not independently tested, so its use to explain the unexamined carrot and mesclun marginal-cost patterns should be treated cautiously.
+
+---
+
+_Reviewed with Claude while drafting (2026-08-30) rather than after a control commit; the model suggested structure and coverage, all prose is mine. See [prompt-log.md](../../prompt-log.md)._
