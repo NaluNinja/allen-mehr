@@ -34,13 +34,23 @@ Figure 3 shows mesclun MC remains below its $2,700 price through the 30-bed cap.
 
 This supports the shadow-price result and distinguishes a binding policy or production cap from an economic stopping point such as the tomato crossing.
 
-## Why tomato MC falls at bed 6
+## Why marginal cost dips across crops
 
-The tomato MC schedule has an unusual decline at bed 6. MC rises from $6,703.12 at bed 4 to $7,660.86 at bed 5, then falls to $4,906.28 at bed 6 before rising again. This is not because tomato production becomes physically less labor-intensive. Total labor requirements continue to rise: 527.076 hours at four beds, 724.730 at five beds, 956.643 at six beds, and 1,227.692 at seven beds.
+The marginal-cost schedules for tomatoes, carrots, and mesclun each decline when production crosses the farmer’s 720 available field hours. These are the validated, mix-independent standalone schedules required by the specification and cross-checked by the Farm Profit Lab; they are not drawn from the untested per-crop block in `Mix!B27:E28`.
 
-The explanation is the farm’s two-tier labor system. The farmer can provide only 720 field hours and is paid at an effective field-labor cost of $34.7222 per hour. Temporary labor costs $17.3611 per hour. The 720-hour threshold is crossed during the fifth tomato bed. Bed 5 still uses the remaining farmer hours and only 4.73 temporary hours, so much of its incremental cost is charged at the higher farmer rate.
+The same labor-pricing mechanism causes every dip. Marginal cost equals the rising incremental labor requirement multiplied by the applicable blended wage, plus fertilizer cost. Although the incremental labor requirement rises with each additional bed, the marginal labor wage falls sharply once the farmer’s 720 hours are exhausted: farmer labor costs $34.7222 per hour, while temporary labor costs $17.3611 per hour. The position of the 720-hour threshold within the crossing bed determines whether the MC decline appears over one bed or two.
 
-The sixth bed requires an additional 231.913 labor hours, all of which are supplied by lower-cost temporary workers because the farmer’s field-hour capacity has already been exhausted. That change in the price of the labor input more than offsets the continued increase in required labor hours, causing MC to decline at bed 6. The dip is therefore due to a transition in labor force, not evidence against diminishing returns in the physical production process.
+| Crop | Last bed under 720 hours | First bed above 720 hours | Marginal-cost dip |
+|---|---:|---:|---|
+| Tomatoes | Bed 4: 527.076 hours | Bed 5: 724.730 hours | Bed 6 |
+| Carrots | Bed 16: 712.563 hours | Bed 17: 776.025 hours | Beds 17 and 18 |
+| Mesclun | Bed 13: 687.529 hours | Bed 14: 749.671 hours | Beds 14 and 15 |
+
+For tomatoes, bed 5 adds 197.654 labor hours, but 192.924 of those hours, or 97.6 percent, are still supplied by the farmer. Only 4.730 hours are temporary labor, leaving a blended wage of $34.31 per hour. Consequently, tomato MC continues to rise to $7,660.86 at bed 5. Bed 6 is supplied entirely by temporary workers, causing MC to fall to $4,906.28 before rising again thereafter.
+
+The carrot and mesclun crossings occur earlier within their respective crossing beds. Carrot bed 17 requires 63.463 additional hours, of which 56.025 hours, or 88.3 percent, are temporary labor. Its blended wage falls to $19.40 per hour, and MC declines to $1,670.90 at bed 17; bed 18 is fully temporary-labor priced and falls further to $1,589.14. Mesclun bed 14 requires 62.142 additional hours, split between 32.471 farmer hours and 29.671 temporary hours. The resulting blended rate is $26.43 per hour, reducing MC to $2,522.58; bed 15 is entirely temporary-labor priced and falls further to $1,983.96.
+
+After the next fully temporary-labor-priced bed, MC rises monotonically again for all three crops because the incremental labor requirement continues to increase. The dip is therefore due to a transition in labor force, not evidence against diminishing returns in the physical production process.
 
 ## Standalone losses and shutdown logic
 
