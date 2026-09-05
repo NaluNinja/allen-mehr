@@ -1,17 +1,16 @@
-<!-- PR TARGET: https://github.com/NaluNinja/allen-mehr | Stage 1.1 (2.5 pts) -->
-# Stage 1.1 review — engagement brief · **97 / 100** (A+) · 2.43 / 2.5 pts
+<!-- PR TARGET: https://github.com/NaluNinja/allen-mehr | Stage 1.1 -->
+# Stage 1.1 review — engagement brief
 
 **Brief:** [`docs/briefs/perfect-competition-brief.md`](https://github.com/NaluNinja/allen-mehr/blob/main/docs/briefs/perfect-competition-brief.md)
 
-> Re-graded 2026-08-27. Your previous score was 92. The five points were all in one place — no "how I would know I was wrong" section — and you did not just add one, you added the constraint analysis underneath it. This is now the strongest brief in the cohort after Day's.
+> Re-graded 2026-08-27. You have been reviewed on this before. The gap were all in one place — no "how I would know I was wrong" section — and you did not just add one, you added the constraint analysis underneath it. This is now one of the two strongest briefs in the cohort.
 
-| Criterion | Earned | Notes |
-|---|---|---|
-| Problem restated in your own voice | 27 / 30 | Unchanged and still clean. You lead with the price-taking constraint — "It cannot control what customers pay, so its decision is limited to choosing the crop mix" — which is the fact that makes this a perfect-competition case rather than a pricing one. The three points off are the same as before: the statement is efficient to the point of being spare. You name the caps as "a maximum number of beds" without giving the numbers, and the 36-week season and the $20,000 appear as "fixed seasonal costs" rather than as figures. A reader who has not read the case cannot reconstruct the problem from your paragraph. |
-| Hypothesis names a specific mix | 25 / 25 | About 10 tomato, 20 carrot, 30 mesclun. Specific, committed, and you say what happens to the leftover four beds rather than letting them go unmentioned. |
-| Economic mechanism | 25 / 25 | Still the best short mechanism in the cohort, and the new constraint section deepens it. You name the driver, the test, and then the sentence that earns the full mark: the four idle beds are idle because the eleventh tomato bed costs more than $8,800, not because the farm ran out of land or hours. Distinguishing "stopped by a constraint" from "stopped by economics" is the central distinction in this case and you are the only person who wrote it down before building anything. |
-| Falsifiability and process | 20 / 20 | Three named outcomes, each tied to the specific assumption it would break, and one of them is aimed at your own central claim rather than at a detail: "All 64 beds are planted, or the labor hours are used up... then land or labor is what stops the farm after all, and my explanation is wrong." Writing the test that could take down your own thesis is the hard version of this criterion and it is the one that earns full marks. The brief is at the correct path, the revision is dated and attributed in the file itself, the AI session is logged, and the whole thing predates your spec by a day — the order this stage requires. |
-| **Final** | **97 / 100** | earned on merit |
+| Criterion | Where it stands |
+|---|---|
+| Problem restated in your own voice | Unchanged and still clean. You lead with the price-taking constraint — "It cannot control what customers pay, so its decision is limited to choosing the crop mix" — which is the fact that makes this a perfect-competition case rather than a pricing one. The gap off are the same as before: the statement is efficient to the point of being spare. You name the caps as "a maximum number of beds" without giving the numbers, and the 36-week season and the $20,000 appear as "fixed seasonal costs" rather than as figures. A reader who has not read the case cannot reconstruct the problem from your paragraph. |
+| Hypothesis names a specific mix | About 10 tomato, 20 carrot, 30 mesclun. Specific, committed, and you say what happens to the leftover four beds rather than letting them go unmentioned. |
+| Economic mechanism | Still the best short mechanism in the cohort, and the new constraint section deepens it. You name the driver, the test, and then the sentence that earns the full mark: the four idle beds are idle because the eleventh tomato bed costs more than $8,800, not because the farm ran out of land or hours. Distinguishing "stopped by a constraint" from "stopped by economics" is the central distinction in this case and you are the only person who wrote it down before building anything. |
+| Falsifiability and process | Three named outcomes, each tied to the specific assumption it would break, and one of them is aimed at your own central claim rather than at a detail: "All 64 beds are planted, or the labor hours are used up... then land or labor is what stops the farm after all, and my explanation is wrong." Writing the test that could take down your own thesis is the hard version of this criterion and it is the one that earns everything this criterion asks for. The brief is at the correct path, the revision is dated and attributed in the file itself, the AI session is logged, and the whole thing predates your spec by a day — the order this stage requires. |
 
 ### What the new sections added
 
@@ -43,9 +42,11 @@ Treat this PR the way an analyst treats feedback from a senior reviewer — a re
 
 1. **Read it yourself first.** Form your own view before you change anything. Disagreeing *with a documented reason* is a legitimate, senior response.
 2. **Stress-test it with an LLM.** Paste this review and your brief into your assistant and ask it to (a) explain anything you are unsure of, and (b) argue the *other side* — where might the reviewer be wrong, and what would you give up by making each change.
-3. **Then write the changes yourself.** For a brief, this matters more than usual: a hypothesis you did not generate cannot be honestly compared against your model in Stage 3, and that comparison is the entire point of writing the brief first.
+3. **Then write the changes yourself.** For a brief this matters more than usual: a hypothesis you did not generate cannot be honestly compared against your model in Stage 3, and that comparison is the entire point of writing the brief first.
 4. **Close the loop.** Reply in this thread with what you changed and what you pushed back on, then commit and push.
 
-*One standing rule for this stage: do not revise your hypothesis to match what your model later tells you. If the model contradicts the brief, that is a finding, not an error — Stage 3 asks you to explain the gap, and a brief quietly edited to be right afterwards has nothing left to explain.*
+*One standing rule: do not revise your hypothesis to match what your model later tells you. If the model contradicts the brief, that is a finding, not an error.*
+
+*Your score and the per-criterion breakdown are in your Lamaku comment, not here — this repository is public.*
 
 — Adam
