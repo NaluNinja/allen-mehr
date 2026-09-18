@@ -9,3 +9,6 @@
 # Editor/OS cruft
 *.tmp
 *.swp
+
+# Personal scratch work, kept out of the evidence trail
+scratch/
