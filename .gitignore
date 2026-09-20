@@ -1,10 +1,11 @@
 # macOS
 .DS_Store
 
-# Excel lock/temp files
+# Office lock/temp files
 ~$*.xlsx
 ~$*.xls
 ~$*.xlsm
+~$*.docx
 
 # Editor/OS cruft
 *.tmp
