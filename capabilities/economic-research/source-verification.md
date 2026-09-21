@@ -52,6 +52,13 @@ highest in 23 years of tracking, not "nearly two decades." **Needs my eyes** on 
 could not verify at all: that the count was "almost double the 2016-2017 level," and that it "had
 already run above 300 for eighteen straight months." Both require ASHP's quarterly series.
 
+**"Roughly half its products" is understated, and it is the wrong population.** The brief says "the
+generics industry now loses money on roughly half its products." ASPE puts **60-76% of generic
+injectable entries underwater at 36 months** — the complement of the 40% and 24% net-profitable shares
+under the low and high fixed-cost scenarios. Two changes follow. The ASPE figure is stronger than the
+brief's, so use it. And the brief's claim is about generics as a whole while ASPE's range is
+injectable-specific, so the replacement sentence has to say **injectables**, not generics.
+
 ## Worth adding
 
 **The acid.** FDA investigators found Intas employees destroying original records and raw data not only
@@ -76,12 +83,44 @@ says only that it is important to "keep the Medicaid program whole for any lost 
 enacted legislative text, which I could not reach. Any bill number cited in the paper must be checked
 against it. Per `AGENTS.md`, this is not final until confirmed against the primary document.
 
+**Two things in the brief that the check contradicts (2026-09-20).** First, the brief says the Senate
+proposal "partly funds itself by loosening Medicaid inflation-rebate caps." No such loosening was
+found. What the May 2024 discussion draft does is let the Secretary *reduce or waive* Medicaid
+inflation rebates for applicable generics in shortage — a different mechanism, and the draft names no
+offset at all, saying only that it is important to "keep the Medicaid program whole for any lost
+rebates." Second, the brief refers to a specific bill number. No bill number was found for this
+proposal; what exists is a discussion draft. Both are to be corrected in the paper.
+
 ## Sources reached
 
 - ASPE, *Analysis of Drug Shortages, 2018-2023* — https://www.ncbi.nlm.nih.gov/books/NBK611681/
 - KFF Health News — https://kffhealthnews.org/health-industry/drugmakers-are-abandoning-cheap-generics-and-now-us-cancer-patients-cant-get-meds/
 - Rebitzer & Rebitzer, Brookings — https://www.brookings.edu/articles/when-cheap-becomes-fragile-how-the-race-to-the-bottom-in-generics-undermines-manufacturing-quality-and-what-to-do-about-it/
 - Wosińska & Frank, The Hamilton Project — https://www.hamiltonproject.org/publication/policy-proposal/federal-policies-to-address-persistent-generic-drug-shortages/
+
+### ASPE, *An Examination of the Return on Investment of Generic Injectable Prescription Drugs* (Dec 2024)
+
+NCBI Bookshelf NBK611650. Retrieved and read 2026-09-20. **Every figure below verified by Allen,
+2026-09-20.**
+
+| Measure | Injectables (low / medium / high fixed cost) | Orals |
+|---|---|---|
+| Fixed cost of entry, E(CC) | $5,921,504 / $9,164,082 / $12,218,777 | — |
+| Months to financial break-even | 15 / 25 / 36 | 13 |
+| ROI at 36 months post launch | 42% / 17% / 0% | 55% |
+| Share of firm-drug entries net profitable at 36 months | 40% / 30% / 24% | 41% |
+
+- **COGS as a share of revenue: 42% is the INJECTABLE figure, 36% is the ORAL figure** (Positano et al.
+  2019). The injectable figure is the one that belongs in the breakeven formula.
+- Sample: 447 generic injectable firm-drug products. 6 of the 447 cleared $100,000,000 in net
+  profitability (orals: 25 of 1,243), which is what pulls the average up.
+- Discount rate 8.82%. All dollar figures normalized to January 2024 dollars using CPI.
+- Launch window July 2018 – July 2021; sales data run through June 2024.
+- **E(CC) comes from ERG (2021) via ASPE's own derivation, not from ERG's Table A-6.** Table A-6's
+  eighteen product-pathway models contain no plain sterile injectable.
+- **The cohort is newly launched generics, not decades-old drugs like cisplatin and carboplatin.**
+  ASPE names that older cohort as the shortage-prone one it did not examine, and states it cannot
+  link profitability levels to shortage risk.
 
 ## Sources still to open myself
 
@@ -94,5 +133,6 @@ against it. Per `AGENTS.md`, this is not final until confirmed against the prima
 ---
 
 _Verification run with Claude (2026-09-19) against the sources the brief cites; findings drafted by
-Claude, and the four flagged claims remain mine to resolve before they enter the paper.
-See [prompt-log.md](../../prompt-log.md)._
+Claude, and the seven flagged claims remain mine to resolve before they enter the paper. Today's
+additions (the seventh correction and the verified ASPE data block) were made by Claude Code at my
+direction. See [prompt-log.md](../../prompt-log.md)._

@@ -10,7 +10,7 @@ courses: [BUS-620]
 
 **Author:** Allen Mehr
 **Date:** 2026-09-20
-**Version:** 0.2 (draft — §§1, 3, 5 filled; §§2, 4, 6, 7 open)
+**Version:** 0.4 (draft — §§1, 2, 3, 5, 7 filled; §4 Figure 2 image export open; §6 open)
 **Brief:** [`docs/briefs/research-brief.md`](../../docs/briefs/research-brief.md)
 **Verification:** [`source-verification.md`](./source-verification.md)
 
@@ -22,20 +22,16 @@ Should Medicare pay hospitals and physicians a reliability add-on for generic st
 conditioned on the contract naming a qualified alternate manufacturer, and what does that premium
 actually buy?
 
-The paper defends the add-on. It is not a survey of shortage causes: the brief's three pillars —
-single-manufacturer market structure, price-inelastic hospital demand, and procurement that rewards
-the lowest bid — are setup for the recommendation, not the subject. The Hamilton Project
-loans-plus-stockpile package stays in scope as the alternative I reject, and the reason I reject it
-is part of the argument.
+This paper defends the add-on. It isn't a survey of why shortages happen. The brief's three causes
+are single-manufacturer markets, demand that doesn't respond to price, and procurement that rewards
+the lowest bid. I use them as setup for the recommendation. The Hamilton Project's loans-plus-stockpile
+package stays in scope as the alternative I'm rejecting, and why I reject it is part of the argument.
 
-Out of scope: amoxicillin and IV saline. The paper narrows to cisplatin and carboplatin, where the
-single-plant failure and the rationing it caused are documented in one traceable episode. Four pages
-does not hold four drugs.
-
-<!-- Claude's wording from your "cut amoxicillin and saline" — rewrite in your voice.
-     Two knock-ons to decide: (a) amoxicillin was the oral contrast case that gave Figure 1's
-     oral bar a named example, so the figure now argues at category level only; (b) the brief's
-     title names all four drugs, so the paper's title should not. -->
+Amoxicillin and IV saline are out of scope. I'm narrowing to cisplatin and carboplatin, because one
+plant failure and the rationing that followed are documented in a single traceable episode, and four
+pages can't carry four drugs. This costs me the oral contrast case, so Figure 1 now argues at the
+category level, injectable against oral, without a named oral drug. The paper's title will name only
+the two drugs I cover.
 
 ## 2. Data Sources
 
@@ -45,7 +41,15 @@ does not hold four drugs.
 
 | Source | What I take from it | Verified? |
 |---|---|---|
-| | | |
+| ASPE, *Return on Investment of Generic Injectable Prescription Drugs* (Dec 2024), NBK611650 — Methods | Fixed cost of entry, generic injectables (E(CC)): low $5,921,504 / medium $9,164,082 / high $12,218,777. ASPE's own derivation from Eastern Research Group (2021), not a figure lifted from ERG's Table A-6. | Yes |
+| ASPE ROI brief, NBK611650 — Methods | COGS as share of revenue: injectables 42%, orals 36% | Yes |
+| ASPE ROI brief, NBK611650 — Methods | Discount rate: 8.82% | Yes |
+| ASPE ROI brief, NBK611650 — Methods | All dollars normalized to January 2024 CPI | Yes |
+| ASPE ROI brief, NBK611650 — Methods | Launch window: July 2018 – July 2021; sales data July 2018 – June 2024 | Yes |
+| ASPE ROI brief, NBK611650 — Results | Months to break-even, injectables: 15 (low) / 25 (medium) / 36 (high); orals: 13 | Yes |
+| ASPE ROI brief, NBK611650 — Results | ROI at 36 months, injectables: 42% / 17% / 0%; orals: 55% | Yes |
+| ASPE ROI brief, NBK611650 — Results | Share net profitable at 36 months, injectables: 40% / 30% / 24%; orals: 41% | Yes |
+| ASPE ROI brief, NBK611650 — Results | Sample: 447 generic injectable firm-drug products; 6 exceeded $100,000,000 in net profitability (orals: 25 of 1,243) | Yes |
 
 <!-- Then: what you still need and do not have. The ASHP quarterly series is the known gap. -->
 
@@ -55,159 +59,37 @@ I can't prove the premium adds capacity. What I can show is that it changes the 
 participation decision. So the analysis is a breakeven: the price uplift needed to cover the cost of
 entering a generic sterile injectable market, compared against the dollar cost of shortages.
 
-The breakeven measures cost of entry — developing a generic and getting it approved — not the capital
-cost of building a plant. It therefore tests the participation decision and nothing more. It does not
-settle the capital-cost side against the Hamilton loans, because the loans act on plant capex and
-this analysis does not measure plant capex.
+The breakeven measures the cost of entry, meaning what it takes to develop a generic and get it
+approved. It does not measure the capital cost of building a plant. So it tests one thing, whether a
+manufacturer would participate. It can't settle the premium against the Hamilton loans on cost of
+capital, because the loans act on plant capex and I don't measure that.
 
-COGS runs at 42% of revenue for generic injectables, so contribution margin is 58% and a product
-clears its entry cost when 0.58 × revenue >= E(CC). For a product with 36-month revenue R, the
-required price uplift is u = E(CC)/R - 0.58. I report this as a curve rather than a single figure,
-because the uplift depends on where in the revenue distribution a product sits and ASPE publishes
-that distribution only in $100,000 increments.
+COGS runs 42% of revenue for generic injectables, so contribution margin is 58%. A product clears its
+entry cost when 0.58 × revenue >= E(CC). For a product with 36-month revenue R, the required price
+uplift is u = E(CC)/R − 0.58. I report this as a curve, not a single number. The uplift depends on
+where a product sits in the revenue distribution, and ASPE only publishes that distribution in
+$100,000 increments.
 
-Three limits belong next to the figure. It is a first-order bound: it does not discount within the
-36-month window the way ASPE does at 8.82%. It assumes the premium is pure margin, with volume and
-COGS per unit unchanged. And it assumes the manufacturer captures the uplift, which the add-on does
-not guarantee, since it is paid to hospitals and physicians; §5 takes that up, because it is the
-reason for the amendment rather than a footnote to the arithmetic.
+The figure has three limits, and I'm stating them next to it. It's a first-order bound. It doesn't
+discount within the 36-month window the way ASPE does at 8.82%. It treats the premium as pure margin,
+with volume and per-unit COGS unchanged. And it assumes the manufacturer actually captures the uplift.
+The add-on is paid to hospitals and physicians, so nothing guarantees that. That gap is why §5 amends
+the policy, and it isn't a footnote to the arithmetic.
 
-The course concepts doing the work are fixed costs and barriers to entry (why sterile capacity does
-not appear on its own), price-inelastic demand (why the shortage shows up as rationing rather than
-as a higher price), and market structure (why a single plant failing removes supply nobody can
-replace).
+Two limits sit on the data rather than the arithmetic. ASPE's cohort is generics launched between July
+2018 and July 2021, a stretch of heavy price erosion, and those are newly launched products — cisplatin
+and carboplatin are decades old. ASPE names that older cohort as the shortage-prone one it did not
+examine. ASPE also says it cannot link profitability to shortage risk, which is the step from low
+margin to exit to shortage that my argument runs on. Both go in the paper.
 
-What the analysis has to show for §5 to hold: that the uplift required to make a sterile line
-viable is small relative to the dollar cost of the shortages it prevents. If it is not, the
-recommendation fails and the Hamilton loans look better by comparison. I accept that as the
-condition that would make this come out the other way (2026-09-20).
+Three course concepts do the work here. Fixed costs and barriers to entry explain why sterile capacity
+doesn't show up on its own. Price-inelastic demand explains why a shortage appears as rationing and
+not as a higher price. Market structure explains why one plant failing removes supply nobody else can
+replace.
 
-<!-- STILL YOURS: four inputs, none of them sourced yet. If any one is not findable, better to
-     know before building the analysis around it.
-       - annuitized capital cost of an FDA-approved sterile injectable line
-       - plant utilization / volume assumption
-       - current net price per unit
-       - cost of shortages on the other side of the comparison
-     Shortage cost is dollar-costed (substitution, labor, wastage), decided 2026-09-20, so the
-     comparison sits on one axis. Rationed doses stay in the paper as the thing the dollars stand
-     in for, not as a second number.
-
-     SOURCING STATUS as of 2026-09-20 (Claude Code search; none of this is verified yet):
-
-     SHORTAGE COST — in reach.
-       Vizient, "Beyond the Shortage: The Hidden Cost of Drug Supply Chain Disruptions" (2025):
-       ~20 million hours spent managing shortages in 2023, ~$894M/yr in labor, up from just under
-       $360M in 2019. Mayo Clinic Proceedings (2014): ~$216M annualized personnel cost — gives a
-       decade-long trend line.
-       TWO LIMITS: both are LABOR ONLY, so they exclude the substitution and wastage you said you
-       would count, and both cover ALL shortages, not sterile injectables alone. Cited as-is they
-       understate one side of your breakeven. Say so rather than letting it pass.
-
-     CAPEX — not in reach at the right grain. Only company announcements, which are not cost
-     accounting and mix branded and biologic work into the figure:
-       Civica Rx $124.5M / 140,000 sq ft (Petersburg VA); Pfizer ~$500M (Michigan);
-       Grand River Aseptic $60M / 61,500 sq ft (2020); CordenPharma EUR 80M (facility + lines).
-
-     >>> RETRIEVED AND READ 2026-09-20. ASPE, "An Examination of the Return on Investment of
-     Generic Injectable Prescription Drugs" (Dec 2024), NCBI Bookshelf NBK611650. HHS has already
-     run this breakeven. Data: IQVIA National Sales Perspective, all generic injectable and oral
-     products launched after June 2018 with at least 36 months of post-entry data.
-
-       Months to financial break-even after market entry, generic INJECTABLES:
-         15 (low fixed cost) / 25 (medium) / 36 (high).   Generic ORALS: 13.
-       ROI at 36 months post launch, INJECTABLES: 42% (low) / 17% (medium) / 0% (high).
-         ORALS: 55%.
-       Share of firm-drug entries net profitable at 36 months, INJECTABLES:
-         40% (low) / 30% (medium) / 24% (high).   ORALS: 41%.
-       ASPE's own words: "even 36 months post firm-drug entry, the majority of generic injectable
-       drugs are financially underwater."
-       Also: a small subset of entries earns a disproportionate share of revenue, so the AVERAGE
-       overstates what the MARGINAL entrant can expect. Work from the full distribution across all
-       three fixed-cost scenarios, not from the mean, and not from any single scenario.
-
-     THE HORIZON ROUGHLY LINES UP WITH THE CONTRACT TERM. ASPE's 36-month window is close to the
-     Senate draft's three-year minimum. Across the fixed-cost scenarios, an injectable entrant is
-     anywhere from comfortably ahead to barely returning anything by the time that term is up, and
-     in every scenario most individual products are still underwater. The term by itself therefore
-     does not pay; the PREMIUM has to. That is the quantitative form of the argument §5 already
-     makes in words. Note the limits: 36 months is where ASPE's SAMPLE ENDS, not a derived
-     horizon, and the scenarios are assumptions about fixed cost, not measurements of it.
-
-     ALSO: the brief says generics "lose money on roughly half" their products. ASPE puts 60-76%
-     of generic injectable entries underwater at 36 months. Your own source is stronger than your
-     claim — and specific to injectables. Consider upgrading the sentence.
-
-     >>> WHAT "FIXED COST" MEANS HERE — CHECK §3'S WORDING. ASPE's fixed cost scenarios come from
-     Eastern Research Group (2021), "Cost of Generic Drugs" (ASPE/ERG, aspe.hhs.gov). ERG models
-     the cost of DEVELOPING AND GETTING APPROVAL FOR a generic (ANDA) — fifteen development
-     stages, 8.82% opportunity cost of capital, eighteen product-pathway models including
-     injectable solutions. It does NOT model the capital cost of building a sterile line.
-     §3 currently says "annualized sterile line," which is plant capex. These are different
-     things and only one of them is sourceable.
-
-     WHAT THE BREAKEVEN CAN AND CANNOT SETTLE. ERG's numbers are about getting a drug approved,
-     not about building a plant. So this breakeven tests one thing: whether a manufacturer would
-     ENTER. It does not adjudicate the premium against the Hamilton loans on the cost of capital,
-     because the loans act on plant capex and nothing here measures plant capex. Say that in the
-     paper rather than letting the comparison imply more than the analysis supports.
-
-     RECOMMEND REFRAMING §3 to cost of ENTRY rather than plant capex, because that is the
-     participation decision you said the analysis is about, and ERG states the rule as an
-     equation: a generic applicant whose expected capitalized cost of development E(CC) is
-     $6.5M "will enter a given market, if the expected present value of revenues over the
-     lifetime of its generic, E(R), is $6.5 million or greater." E(R) >= E(CC) is your breakeven.
-     The premium raises E(R). ($6.5M is ERG's SIMPLE ORAL example — $2.6M cash outlay
-     capitalized for failures and 8.82% cost of capital.) DECIDED 2026-09-20: entry cost.
-
-     >>> THE INJECTABLE ENTRY COST, FOUND 2026-09-20. Not in ERG Table A-6 — that table's eighteen
-     models are small molecule, topical, NTI, inhalers, liposomes/dendrimers/polymeric micelles,
-     iron carbohydrate complexes, ophthalmic emulsions and glatiramoids. There is no plain sterile
-     injectable among them. ASPE derived its own figures from ERG's estimates instead, and states
-     them in the ROI brief:
-
-       Fixed cost of entry, generic injectables:
-         low $5,921,504 / medium $9,164,082 / high $12,218,777   (ASPE, from ERG 2021)
-       COGS as a share of revenue: injectables 42%, orals 36%   (Positano et al. 2019)
-       Sample: 447 generic injectable firm-drug products.
-       Distribution: right-skewed. 6 of the 447 cleared $100,000,000 in net profitability, which
-       is what drags the average up. This is why the mean is the wrong statistic here.
-
-     That is E(CC) for your E(R) >= E(CC) breakeven, in three scenarios, with a variable-cost share
-     to go with it. WHAT IS STILL MISSING IS THE PREMIUM. We have the cost side and the shape of
-     the revenue side; §3 still has to say what uplift closes the gap. That calculation has not
-     been run. (Correcting my own "the inputs are complete" of 2026-09-20 — having E(CC) is not
-     having the analysis.)
-
-     SAMPLE AND UNITS, for the paper: products launched July 2018 – July 2021, sales data
-     July 2018 – June 2024, all dollars normalized to January 2024 CPI, discount rate 8.82%.
-     Say the launch window out loud — it is a stretch of heavy generic price erosion, so it is
-     not a neutral period to draw a profitability sample from.
-
-     >>> THE LIMIT THAT MATTERS MOST. ASPE's cohort is NEWLY LAUNCHED generics. Cisplatin and
-     carboplatin are decades-old ones. ASPE says so itself: older generics are "frequently
-     highlighted as being especially prone to shortage risk due to low profitability. Since our
-     work focuses on newer generics, future work may expand to examine this older cohort." So the
-     analysis describes entrants into the injectable market, not the drugs this paper is about.
-     The bias probably runs your way — old off-patent injectables are unlikely to be MORE
-     profitable than new launches — but that is an argument to make, not an assumption to lean on.
-     ASPE also states it cannot "definitively link specific levels of profitability with shortage
-     risks," which is exactly the causal step from low margin to exit to shortage. State both.
-
-     >>> ON THE APPENDIX CONTRADICTION (settled 2026-09-20). Cite the main body: 42% low / 17%
-     medium / 0% high. Higher fixed cost must mean lower ROI, and the break-even timings
-     (15/25/36 months) rise with fixed cost in step with the main body. The appendix has ROI
-     rising with fixed cost, which cannot be right. It is not a clean swap either — each figure is
-     off by one (-1/0, 16/17, 41/42), so it reads like an earlier version or a rounding pass with
-     the labels reversed. If the discrepancy is mentioned at all, it goes in a footnote, and the
-     appendix numbers are not quoted.
-
-     ALSO WORTH READING: Wosińska's written testimony to the Senate Finance Committee, 5 Dec 2023
-     (brookings.edu/wp-content/uploads/2023/12/Senate-Finance-Testimony-Final-12.5.2023.pdf).
-     She testified to the committee whose draft you defend, so it bears on §5 as well as §3.
-
-     HAMILTON: checked. The page carries $2B with no sizing, and partial loan forgiveness tied to
-     quality milestones. The full PDF would not parse here. My earlier claim that it "probably
-     contains the capital cost figures" was overstated — treat it as unconfirmed. -->
+For §5 to hold, the analysis has to show that the uplift needed to make a sterile line viable is small
+next to the dollar cost of the shortages it prevents. If it isn't, the recommendation fails and the
+Hamilton loans look better by comparison. I accept that as the result that would change my answer.
 
 ## 4. Figures
 
@@ -217,8 +99,8 @@ condition that would make this come out the other way (2026-09-20).
 
 | # | Figure | Claim it supports | Data source | Built? |
 |---|---|---|---|---|
-| 1 | Median years in shortage, by drug type | Sterile capacity is slow and costly to stand up, so injectable shortages run 2.89× oral ones — which is why a multi-year volume commitment is what finances a line | ASPE 2018–2023 | Yes — [`analysis/figures/shortage-duration-by-drug-type.svg`](../../analysis/figures/shortage-duration-by-drug-type.svg) |
-| 2 | Required price uplift by product revenue — three lines for the low, medium and high E(CC) scenarios, with the 70%-underwater mark shown | The premium's cost depends on how far down the revenue distribution it has to reach; a flat add-on that rescues the median product does nothing for the tail | ASPE ROI brief (E(CC), COGS 42%) | No — Allen builds, Claude Code verifies |
+| 1 | Median years in shortage, by drug type | Injectable shortages last nearly three times as long as oral ones, because sterile capacity is slow and expensive to stand up. That is why a multi-year volume commitment is what lets a manufacturer finance a line | ASPE 2018–2023 | Yes — [`analysis/figures/shortage-duration-by-drug-type.svg`](../../analysis/figures/shortage-duration-by-drug-type.svg) |
+| 2 | Required price uplift by product revenue — three lines for the low, medium and high E(CC) scenarios, with the 70%-underwater mark shown | What the premium costs depends on how far down the revenue distribution it has to reach. A flat add-on that rescues the median product does nothing for the tail | ASPE ROI brief (E(CC), COGS 42%) | Spreadsheet built — [`analysis/required-uplift-u.xlsx`](../../analysis/required-uplift-u.xlsx). Image export for the paper still to do. |
 
 <!-- A third figure is optional. The generic price-decline series would support pillar three, but
      the 10–15% figure is time-bounded (see source-verification.md) and three scattered points
@@ -246,41 +128,28 @@ The condition answers lock-in. The premium only pays out when the contract inclu
 qualified source, it is tied to auditable outcomes like fill rate and FDA inspection record rather
 than incumbency, and contracts are re-bid at term end.
 
-**Why the amendment is necessary, not decorative.** The add-on is paid to hospitals and physicians.
-The participation decision belongs to the manufacturer. So the money enters at the provider and has
-to travel to the manufacturer through a contract nobody audits, and nothing in the draft guarantees
-it arrives. Conditioning payment on a verified, performing alternate source and on fill rate is what
-ties the provider's money to something only a real manufacturer relationship can produce. That is
-the amendment's job. This is consistent with Wosińska and Frank's critique — they argue the draft
-does not explicitly address reliability and that its complexity carries compliance costs — though
-the pass-through problem is my argument, not a claim they make.
+**Why the amendment matters.** The add-on is paid to hospitals and physicians, but the decision to
+participate belongs to the manufacturer. So the money enters at the provider and has to reach the
+manufacturer through a contract nobody audits. Nothing in the draft says it will arrive. Requiring a
+verified, performing alternate source, and tying payment to fill rate, links the provider's money to
+something only a real manufacturer relationship can produce. That is the amendment's job. It fits
+Wosińska and Frank's critique, which says the draft doesn't explicitly address reliability and that
+its complexity carries compliance costs. The pass-through problem is my argument, though, not one
+they make.
 
-<!-- The paragraph above is Claude's wording from your direction, 2026-09-20 — rewrite in your voice.
+**What I defend.** The main objection to the Senate draft is that it doesn't actually buy reliability.
+I defend an amended version that does, and I say so on page one so a reader who knows the Brookings
+critique doesn't assume I missed it.
 
-     Claude's, 2026-09-20 — argument scaffolding, not your prose. Rewrite or cut.
+The amendment tightens the draft and doesn't add a new condition. The draft already ties payment to
+contingency contracts with alternate manufacturers. I add teeth. The alternate has to be verified and
+performing, not just named in a contract, and payment rides on auditable outcomes like fill rate and
+inspection record. The drafters already accepted the principle. My argument is that they wrote it in a
+form nobody can check.
 
-     WHAT THE PAPER DEFENDS, STATED ON PAGE ONE. The leading objection to the Senate draft is
-     that it does not actually buy reliability. The paper defends an amended version that does.
-     Say this early or a reviewer meets the Brookings critique first and assumes it was missed.
-
-     THE AMENDMENT IS A TIGHTENING, NOT AN INVENTION. This is the load-bearing point. The draft
-     ALREADY conditions payment on contingency contracts with alternate manufacturers — that came
-     out of your own 2026-09-20 bill check. So the amendment does not add the condition and must
-     not be described as doing so. What it adds is teeth: the alternate must be verified and
-     performing rather than merely named in a contract, and payment rides on auditable outcomes
-     (fill rate, inspection record) instead of the draft's process measures and lump-sum payments.
-     That is a far easier position to defend than proposing a new condition, because the drafters
-     already conceded the principle — the argument is that they wrote it in a form that cannot be
-     checked, which is precisely why Wosińska and Frank can say the program does not buy
-     reliability.
-
-     ON THE CRITICS. Wosińska and Frank wrote both the Hamilton loans-plus-stockpile proposal and
-     the Brookings critique of the Senate draft. Cite them as interested parties. Their own
-     proposal is not budget-neutral either, so the premium's cost cannot be a disqualifier for
-     mine and a detail for theirs — the same standard applies to their $2B.
-
-     UNVERIFIED: the "process measures and lump-sum payments" characterisation is white-paper
-     reading, same caveat as the rest of the funding work. -->
+Wosińska and Frank wrote both the Hamilton proposal and the Brookings critique, so I cite them as
+interested parties. Their $2 billion isn't budget-neutral either. Cost can't disqualify my premium
+while it stays a detail for theirs.
 
 **The funding half.** The Senate Finance draft lets the Secretary reduce or waive Medicaid inflation
 rebates for generics in shortage, and it bars participating hospitals from accepting 340B discounts on
@@ -306,38 +175,24 @@ recommendation adds a requirement that the Secretary keep Medicaid whole.
      figure introduced and interpreted in the text, the recommendation following from the analysis
      rather than sitting beside it. -->
 
+- [ ] Footnote the ASPE appendix ROI discrepancy, quoting main-body figures only.
 - [ ] 
 - [ ] 
 
 ## 7. AI Boundaries
 
-**Plan for the §3 breakeven (agreed 2026-09-20).** The breakeven is the part of §3 that carries the
-argument, so it is mine to build.
-
-1. I build the model and **commit it first**, so a control exists in the history before any review.
-2. Claude Code then recomputes from ASPE's published inputs and the formula `u = E(CC)/R - 0.58`,
-   independently, without reading my outputs first.
-3. We compare. Anything that differs gets run down, not reconciled.
-
-This is the pattern the Stage 3 memo said a future stage should use. The perfect-competition
-retrospective recorded that matching check figures the builder already knew was "confirmation
-rather than independent validation" — step 2 exists to avoid repeating that.
-
-<!-- STILL YOURS: the rest of the table. Per artifact, per AGENTS.md — which parts are human-first,
-     which are AI-first-verified, which are off limits. The brief was human-first. The paper's prose
-     should be too. Say where AI may help — structural review, source checking, figure
-     construction — and where it may not. -->
-
-| Artifact | Draft order |
-|---|---|
-| `analysis/research-paper.pdf` | |
-| `drafts/YYYY-MM-DD-draft.md` | |
-| figures | |
+| Part of the paper | Who does it | What AI does | How I check |
+|---|---|---|---|
+| Policy choice (§1) | Me | Laid out the options and the counterarguments. Drafted a paragraph covering what is in and out of scope. | I decided the choice. I rewrote both paragraphs in my own words and changed anything I did not agree with. |
+| Sources (§2) | Me | Claude fetched the sources online and cross-referenced them. It then transcribed the figures I had verified. | I checked every ASPE figure line by line before it went in. |
+| Breakeven (§3) | Me. I built the spreadsheet from the formula and ASPE's inputs. | Drafted the surrounding text. Produced the same table independently from the same formula and inputs. | I compared the two row by row (75 cells) and they agreed. Because we used the same formula and the same inputs, this catches arithmetic and transcription errors only. It does not check the formula or the inputs themselves. |
+| Figures (§4) | Figure 2 is mine. | Built Figure 1 from ASPE's data and drafted the claim text for me to review. | I looked at each figure and confirmed, line by line, the values against the original source. |
+| Recommendation (§5) | Me | Drafted the pass-through paragraph and the argument notes. | I rewrote them in my own words and own the argument. |
+| Disclosure | Me | Drafted this table. | I rewrote it in my own words and checked every line against the prompt log. |
 
 ---
 
-_Skeleton drafted with Claude (2026-09-19). My policy decision — §5 in full, §1's question, and
-§3's first paragraph — was written by me and transcribed by Claude (2026-09-20) with the prose
-unchanged. Claude's own words, to be rewritten or cut before this is final: §1's scope paragraph,
-§3's second and third paragraphs, §4's row 2, and every bracketed open item. §§2, 6, 7 remain
-mine to write. See [prompt-log.md](../../prompt-log.md)._
+_§7's table and the row 20 log entry were drafted by Claude (Cowork) on 2026-09-20 from my direction,
+and I've rewritten both. Claude (Cowork) also wrote replacement text for eight marked passages, which
+I rewrote. Claude Code's earlier wording now survives only in comments, not in the paper's prose. §6 is
+still mine to write. See [prompt-log.md](../../prompt-log.md)._
