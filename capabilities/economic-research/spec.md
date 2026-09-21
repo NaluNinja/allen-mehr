@@ -60,6 +60,18 @@ cost of building a plant. It therefore tests the participation decision and noth
 settle the capital-cost side against the Hamilton loans, because the loans act on plant capex and
 this analysis does not measure plant capex.
 
+COGS runs at 42% of revenue for generic injectables, so contribution margin is 58% and a product
+clears its entry cost when 0.58 × revenue >= E(CC). For a product with 36-month revenue R, the
+required price uplift is u = E(CC)/R - 0.58. I report this as a curve rather than a single figure,
+because the uplift depends on where in the revenue distribution a product sits and ASPE publishes
+that distribution only in $100,000 increments.
+
+Three limits belong next to the figure. It is a first-order bound: it does not discount within the
+36-month window the way ASPE does at 8.82%. It assumes the premium is pure margin, with volume and
+COGS per unit unchanged. And it assumes the manufacturer captures the uplift, which the add-on does
+not guarantee, since it is paid to hospitals and physicians; §5 takes that up, because it is the
+reason for the amendment rather than a footnote to the arithmetic.
+
 The course concepts doing the work are fixed costs and barriers to entry (why sterile capacity does
 not appear on its own), price-inelastic demand (why the shortage shows up as rationing rather than
 as a higher price), and market structure (why a single plant failing removes supply nobody can
@@ -206,7 +218,7 @@ condition that would make this come out the other way (2026-09-20).
 | # | Figure | Claim it supports | Data source | Built? |
 |---|---|---|---|---|
 | 1 | Median years in shortage, by drug type | Sterile capacity is slow and costly to stand up, so injectable shortages run 2.89× oral ones — which is why a multi-year volume commitment is what finances a line | ASPE 2018–2023 | Yes — [`analysis/figures/shortage-duration-by-drug-type.svg`](../../analysis/figures/shortage-duration-by-drug-type.svg) |
-| 2 | Breakeven: price uplift vs. annuitized line cost | The uplift needed is small relative to the shortage cost it prevents | §3 inputs, not yet sourced | No |
+| 2 | Required price uplift by product revenue — three lines for the low, medium and high E(CC) scenarios, with the 70%-underwater mark shown | The premium's cost depends on how far down the revenue distribution it has to reach; a flat add-on that rescues the median product does nothing for the tail | ASPE ROI brief (E(CC), COGS 42%) | No — Allen builds, Claude Code verifies |
 
 <!-- A third figure is optional. The generic price-decline series would support pillar three, but
      the 10–15% figure is time-bounded (see source-verification.md) and three scattered points
@@ -234,7 +246,18 @@ The condition answers lock-in. The premium only pays out when the contract inclu
 qualified source, it is tied to auditable outcomes like fill rate and FDA inspection record rather
 than incumbency, and contracts are re-bid at term end.
 
-<!-- Claude's, 2026-09-20 — argument scaffolding, not your prose. Rewrite or cut.
+**Why the amendment is necessary, not decorative.** The add-on is paid to hospitals and physicians.
+The participation decision belongs to the manufacturer. So the money enters at the provider and has
+to travel to the manufacturer through a contract nobody audits, and nothing in the draft guarantees
+it arrives. Conditioning payment on a verified, performing alternate source and on fill rate is what
+ties the provider's money to something only a real manufacturer relationship can produce. That is
+the amendment's job. This is consistent with Wosińska and Frank's critique — they argue the draft
+does not explicitly address reliability and that its complexity carries compliance costs — though
+the pass-through problem is my argument, not a claim they make.
+
+<!-- The paragraph above is Claude's wording from your direction, 2026-09-20 — rewrite in your voice.
+
+     Claude's, 2026-09-20 — argument scaffolding, not your prose. Rewrite or cut.
 
      WHAT THE PAPER DEFENDS, STATED ON PAGE ONE. The leading objection to the Senate draft is
      that it does not actually buy reliability. The paper defends an amended version that does.
@@ -288,9 +311,22 @@ recommendation adds a requirement that the Secretary keep Medicaid whole.
 
 ## 7. AI Boundaries
 
-<!-- Per artifact, per AGENTS.md. Which parts are human-first, which are AI-first-verified, which
-     are off limits. The brief was human-first. The paper's prose should be too. Say where AI may
-     help — structural review, source checking, figure construction — and where it may not. -->
+**Plan for the §3 breakeven (agreed 2026-09-20).** The breakeven is the part of §3 that carries the
+argument, so it is mine to build.
+
+1. I build the model and **commit it first**, so a control exists in the history before any review.
+2. Claude Code then recomputes from ASPE's published inputs and the formula `u = E(CC)/R - 0.58`,
+   independently, without reading my outputs first.
+3. We compare. Anything that differs gets run down, not reconciled.
+
+This is the pattern the Stage 3 memo said a future stage should use. The perfect-competition
+retrospective recorded that matching check figures the builder already knew was "confirmation
+rather than independent validation" — step 2 exists to avoid repeating that.
+
+<!-- STILL YOURS: the rest of the table. Per artifact, per AGENTS.md — which parts are human-first,
+     which are AI-first-verified, which are off limits. The brief was human-first. The paper's prose
+     should be too. Say where AI may help — structural review, source checking, figure
+     construction — and where it may not. -->
 
 | Artifact | Draft order |
 |---|---|
