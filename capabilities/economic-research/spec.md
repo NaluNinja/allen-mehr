@@ -52,8 +52,13 @@ does not hold four drugs.
 ## 3. Analysis
 
 I can't prove the premium adds capacity. What I can show is that it changes the manufacturer's
-participation decision. So the analysis is a breakeven: the price uplift needed to cover an
-annuitized sterile injectable line, compared against the cost of shortages.
+participation decision. So the analysis is a breakeven: the price uplift needed to cover the cost of
+entering a generic sterile injectable market, compared against the dollar cost of shortages.
+
+The breakeven measures cost of entry — developing a generic and getting it approved — not the capital
+cost of building a plant. It therefore tests the participation decision and nothing more. It does not
+settle the capital-cost side against the Hamilton loans, because the loans act on plant capex and
+this analysis does not measure plant capex.
 
 The course concepts doing the work are fixed costs and barriers to entry (why sterile capacity does
 not appear on its own), price-inelastic demand (why the shortage shows up as rationing rather than
@@ -139,9 +144,50 @@ condition that would make this come out the other way (2026-09-20).
      equation: a generic applicant whose expected capitalized cost of development E(CC) is
      $6.5M "will enter a given market, if the expected present value of revenues over the
      lifetime of its generic, E(R), is $6.5 million or greater." E(R) >= E(CC) is your breakeven.
-     The premium raises E(R). ($6.5M is the SIMPLE ORAL example — $2.6M cash outlay capitalized
-     for failures and cost of capital. The injectable figure is in ERG Table A-6 and still needs
-     pulling.) YOUR CALL, not mine — it changes what §3 promises.
+     The premium raises E(R). ($6.5M is ERG's SIMPLE ORAL example — $2.6M cash outlay
+     capitalized for failures and 8.82% cost of capital.) DECIDED 2026-09-20: entry cost.
+
+     >>> THE INJECTABLE ENTRY COST, FOUND 2026-09-20. Not in ERG Table A-6 — that table's eighteen
+     models are small molecule, topical, NTI, inhalers, liposomes/dendrimers/polymeric micelles,
+     iron carbohydrate complexes, ophthalmic emulsions and glatiramoids. There is no plain sterile
+     injectable among them. ASPE derived its own figures from ERG's estimates instead, and states
+     them in the ROI brief:
+
+       Fixed cost of entry, generic injectables:
+         low $5,921,504 / medium $9,164,082 / high $12,218,777   (ASPE, from ERG 2021)
+       COGS as a share of revenue: injectables 42%, orals 36%   (Positano et al. 2019)
+       Sample: 447 generic injectable firm-drug products.
+       Distribution: right-skewed. 6 of the 447 cleared $100,000,000 in net profitability, which
+       is what drags the average up. This is why the mean is the wrong statistic here.
+
+     That is E(CC) for your E(R) >= E(CC) breakeven, in three scenarios, with a variable-cost share
+     to go with it. WHAT IS STILL MISSING IS THE PREMIUM. We have the cost side and the shape of
+     the revenue side; §3 still has to say what uplift closes the gap. That calculation has not
+     been run. (Correcting my own "the inputs are complete" of 2026-09-20 — having E(CC) is not
+     having the analysis.)
+
+     SAMPLE AND UNITS, for the paper: products launched July 2018 – July 2021, sales data
+     July 2018 – June 2024, all dollars normalized to January 2024 CPI, discount rate 8.82%.
+     Say the launch window out loud — it is a stretch of heavy generic price erosion, so it is
+     not a neutral period to draw a profitability sample from.
+
+     >>> THE LIMIT THAT MATTERS MOST. ASPE's cohort is NEWLY LAUNCHED generics. Cisplatin and
+     carboplatin are decades-old ones. ASPE says so itself: older generics are "frequently
+     highlighted as being especially prone to shortage risk due to low profitability. Since our
+     work focuses on newer generics, future work may expand to examine this older cohort." So the
+     analysis describes entrants into the injectable market, not the drugs this paper is about.
+     The bias probably runs your way — old off-patent injectables are unlikely to be MORE
+     profitable than new launches — but that is an argument to make, not an assumption to lean on.
+     ASPE also states it cannot "definitively link specific levels of profitability with shortage
+     risks," which is exactly the causal step from low margin to exit to shortage. State both.
+
+     >>> ON THE APPENDIX CONTRADICTION (settled 2026-09-20). Cite the main body: 42% low / 17%
+     medium / 0% high. Higher fixed cost must mean lower ROI, and the break-even timings
+     (15/25/36 months) rise with fixed cost in step with the main body. The appendix has ROI
+     rising with fixed cost, which cannot be right. It is not a clean swap either — each figure is
+     off by one (-1/0, 16/17, 41/42), so it reads like an earlier version or a rounding pass with
+     the labels reversed. If the discrepancy is mentioned at all, it goes in a footnote, and the
+     appendix numbers are not quoted.
 
      ALSO WORTH READING: Wosińska's written testimony to the Senate Finance Committee, 5 Dec 2023
      (brookings.edu/wp-content/uploads/2023/12/Senate-Finance-Testimony-Final-12.5.2023.pdf).
