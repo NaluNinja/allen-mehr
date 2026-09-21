@@ -62,8 +62,19 @@ appear in the reporting I could reach and should be confirmed against the Form 4
 **The Senate proposal's third requirement.** The brief names two conditions, three-year contracts and
 meaningful purchase volumes. The source names a third: providers must "maintain contingency agreements
 with alternate manufacturers." The add-on payments also go to "hospitals and physicians," not hospitals
-alone. On funding, the source describes eliminating Medicaid inflation rebates and removing rebate caps
-in the 340B program, which is not the same as the brief's "loosening Medicaid inflation-rebate caps."
+alone. On funding, both the brief's "loosening Medicaid inflation-rebate caps" and my earlier reading
+of Brookings ("eliminating Medicaid inflation rebates and removing 340B rebate caps") are wrong.
+Checked against the Senate Finance Committee's **May 2024 discussion draft** (2026-09-20): the draft
+gives the Secretary authority to *reduce or waive* Medicaid inflation rebates for applicable generics
+in shortage. There is no "340B rebate cap" in it. Instead, participating hospitals must certify they
+"did not seek or accept any discounts" on the applicable generics, 340B discounts included. Waiving
+the inflation rebate separately *raises* 340B ceiling prices, since the ceiling is AMP minus the unit
+rebate amount, so part of the cost lands on 340B hospitals. The Finance white paper names no offset and
+says only that it is important to "keep the Medicaid program whole for any lost rebates."
+
+*Standing caveat:* this rests on the May 2024 discussion draft and on AHA's reading of it, not on
+enacted legislative text, which I could not reach. Any bill number cited in the paper must be checked
+against it. Per `AGENTS.md`, this is not final until confirmed against the primary document.
 
 ## Sources reached
 

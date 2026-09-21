@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420" role="img" aria-labelledby="figTitle figDesc">
+  <title id="figTitle">Median years in shortage, by drug type, U.S. drug shortages 2018-2023</title>
+  <desc id="figDesc">Two panels on a shared scale. By route of administration: injectable 4.60 years, topical 2.21, oral 1.59. By essentiality: essential medicines 4.0, non-essential 2.3. Injectable shortages run 2.89 times as long as oral.</desc>
+
+  <rect x="0" y="0" width="700" height="420" fill="#fcfcfb"/>
+
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+
+    <text x="30" y="32" font-size="15" font-weight="600" fill="#0b0b0b">Sterile injectables stay in shortage nearly three times as long as orals</text>
+    <text x="30" y="52" font-size="12" fill="#52514e">Median years in shortage, U.S. drug shortages 2018&#8211;2023</text>
+
+    <g stroke="#e8e8e6" stroke-width="1">
+      <line x1="288" y1="92" x2="288" y2="330"/>
+      <line x1="381" y1="92" x2="381" y2="330"/>
+      <line x1="474" y1="92" x2="474" y2="330"/>
+      <line x1="567" y1="92" x2="567" y2="330"/>
+      <line x1="660" y1="92" x2="660" y2="330"/>
+    </g>
+
+    <g font-size="10.5" fill="#52514e" letter-spacing="0.6">
+      <text x="30" y="86">BY ROUTE OF ADMINISTRATION</text>
+      <text x="30" y="238">BY ESSENTIALITY</text>
+    </g>
+
+    <g font-size="12.5" fill="#0b0b0b" text-anchor="end">
+      <text x="185" y="117">Injectable</text>
+      <text x="185" y="157">Topical</text>
+      <text x="185" y="197">Oral</text>
+      <text x="185" y="269">Essential medicines</text>
+      <text x="185" y="309">Non-essential medicines</text>
+    </g>
+
+    <path d="M195,100 H618.8 Q622.8,100 622.8,104 V122 Q622.8,126 618.8,126 H195 Z" fill="#2a78d6"/>
+    <path d="M195,140 H396.5 Q400.5,140 400.5,144 V162 Q400.5,166 396.5,166 H195 Z" fill="#97a2ab"/>
+    <path d="M195,180 H338.9 Q342.9,180 342.9,184 V202 Q342.9,206 338.9,206 H195 Z" fill="#97a2ab"/>
+    <path d="M195,252 H563 Q567,252 567,256 V274 Q567,278 563,278 H195 Z" fill="#97a2ab"/>
+    <path d="M195,292 H404.9 Q408.9,292 408.9,296 V314 Q408.9,318 404.9,318 H195 Z" fill="#97a2ab"/>
+
+    <g font-size="12.5" font-weight="600" fill="#0b0b0b">
+      <text x="630.8" y="117">4.60</text>
+      <text x="408.5" y="157">2.21</text>
+      <text x="350.9" y="197">1.59</text>
+      <text x="575" y="269">4.0</text>
+      <text x="416.9" y="309">2.3</text>
+    </g>
+
+    <line x1="195" y1="92" x2="195" y2="330" stroke="#52514e" stroke-width="1"/>
+
+    <g font-size="11" fill="#52514e" text-anchor="middle">
+      <text x="195" y="348">0</text>
+      <text x="288" y="348">1</text>
+      <text x="381" y="348">2</text>
+      <text x="474" y="348">3</text>
+      <text x="567" y="348">4</text>
+      <text x="660" y="348">5</text>
+      <text x="427" y="370" font-size="12">Median years in shortage</text>
+    </g>
+
+    <text x="30" y="396" font-size="10" fill="#52514e">Injectable-to-oral ratio: 2.89&#215;. Route and essentiality are separate cuts of the same data, not one ranking.</text>
+    <text x="30" y="410" font-size="10" fill="#52514e">Source: HHS, ASPE, Analysis of Drug Shortages, 2018&#8211;2023 (NCBI Bookshelf NBK611681).</text>
+
+  </g>
+</svg>

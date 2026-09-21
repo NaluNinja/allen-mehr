@@ -9,8 +9,8 @@ courses: [BUS-620]
 # Spec — Generic Drug Shortages
 
 **Author:** Allen Mehr
-**Date:** 2026-09-__
-**Version:** 0.1 (draft)
+**Date:** 2026-09-20
+**Version:** 0.2 (draft — §§1, 3, 5 filled; §§2, 4, 6, 7 open)
 **Brief:** [`docs/briefs/research-brief.md`](../../docs/briefs/research-brief.md)
 **Verification:** [`source-verification.md`](./source-verification.md)
 
@@ -18,10 +18,24 @@ courses: [BUS-620]
 
 ## 1. Scope & Question
 
-<!-- Two or three sentences. The one question this paper answers — not the topic, the question.
-     "Why do cheap sterile injectables keep going short" is a topic. "Should Medicare pay a
-     reliability premium for generic sterile injectables, and what would it buy" is a question.
-     Name what is in scope and what you are deliberately leaving out. Four pages is not much. -->
+Should Medicare pay hospitals and physicians a reliability add-on for generic sterile injectables,
+conditioned on the contract naming a qualified alternate manufacturer, and what does that premium
+actually buy?
+
+The paper defends the add-on. It is not a survey of shortage causes: the brief's three pillars —
+single-manufacturer market structure, price-inelastic hospital demand, and procurement that rewards
+the lowest bid — are setup for the recommendation, not the subject. The Hamilton Project
+loans-plus-stockpile package stays in scope as the alternative I reject, and the reason I reject it
+is part of the argument.
+
+Out of scope: amoxicillin and IV saline. The paper narrows to cisplatin and carboplatin, where the
+single-plant failure and the rationing it caused are documented in one traceable episode. Four pages
+does not hold four drugs.
+
+<!-- Claude's wording from your "cut amoxicillin and saline" — rewrite in your voice.
+     Two knock-ons to decide: (a) amoxicillin was the oral contrast case that gave Figure 1's
+     oral bar a named example, so the figure now argues at category level only; (b) the brief's
+     title names all four drugs, so the paper's title should not. -->
 
 ## 2. Data Sources
 
@@ -37,38 +51,177 @@ courses: [BUS-620]
 
 ## 3. Analysis
 
-<!-- The economics you will actually run, named. This is the section that stops the paper from
-     becoming a summary of the sources. 30% of the rubric.
+I can't prove the premium adds capacity. What I can show is that it changes the manufacturer's
+participation decision. So the analysis is a breakeven: the price uplift needed to cover an
+annuitized sterile injectable line, compared against the cost of shortages.
 
-     Decide and state:
-     - Which course concepts do the work (market structure, elasticity, fixed costs and entry,
-       marginal cost, shortage/price ceiling dynamics — pick the ones that earn their place)
-     - What you compute or model, and from what inputs
-     - What the analysis has to show for the recommendation in §5 to hold
+The course concepts doing the work are fixed costs and barriers to entry (why sterile capacity does
+not appear on its own), price-inelastic demand (why the shortage shows up as rationing rather than
+as a higher price), and market structure (why a single plant failing removes supply nobody can
+replace).
 
-     If you cannot say what would make the analysis come out the other way, it is not analysis. -->
+What the analysis has to show for §5 to hold: that the uplift required to make a sterile line
+viable is small relative to the dollar cost of the shortages it prevents. If it is not, the
+recommendation fails and the Hamilton loans look better by comparison. I accept that as the
+condition that would make this come out the other way (2026-09-20).
+
+<!-- STILL YOURS: four inputs, none of them sourced yet. If any one is not findable, better to
+     know before building the analysis around it.
+       - annuitized capital cost of an FDA-approved sterile injectable line
+       - plant utilization / volume assumption
+       - current net price per unit
+       - cost of shortages on the other side of the comparison
+     Shortage cost is dollar-costed (substitution, labor, wastage), decided 2026-09-20, so the
+     comparison sits on one axis. Rationed doses stay in the paper as the thing the dollars stand
+     in for, not as a second number.
+
+     SOURCING STATUS as of 2026-09-20 (Claude Code search; none of this is verified yet):
+
+     SHORTAGE COST — in reach.
+       Vizient, "Beyond the Shortage: The Hidden Cost of Drug Supply Chain Disruptions" (2025):
+       ~20 million hours spent managing shortages in 2023, ~$894M/yr in labor, up from just under
+       $360M in 2019. Mayo Clinic Proceedings (2014): ~$216M annualized personnel cost — gives a
+       decade-long trend line.
+       TWO LIMITS: both are LABOR ONLY, so they exclude the substitution and wastage you said you
+       would count, and both cover ALL shortages, not sterile injectables alone. Cited as-is they
+       understate one side of your breakeven. Say so rather than letting it pass.
+
+     CAPEX — not in reach at the right grain. Only company announcements, which are not cost
+     accounting and mix branded and biologic work into the figure:
+       Civica Rx $124.5M / 140,000 sq ft (Petersburg VA); Pfizer ~$500M (Michigan);
+       Grand River Aseptic $60M / 61,500 sq ft (2020); CordenPharma EUR 80M (facility + lines).
+
+     >>> RETRIEVED AND READ 2026-09-20. ASPE, "An Examination of the Return on Investment of
+     Generic Injectable Prescription Drugs" (Dec 2024), NCBI Bookshelf NBK611650. HHS has already
+     run this breakeven. Data: IQVIA National Sales Perspective, all generic injectable and oral
+     products launched after June 2018 with at least 36 months of post-entry data.
+
+       Months to financial break-even after market entry, generic INJECTABLES:
+         15 (low fixed cost) / 25 (medium) / 36 (high).   Generic ORALS: 13.
+       ROI at 36 months post launch, INJECTABLES: 42% (low) / 17% (medium) / 0% (high).
+         ORALS: 55%.
+       Share of firm-drug entries net profitable at 36 months, INJECTABLES:
+         40% (low) / 30% (medium) / 24% (high).   ORALS: 41%.
+       ASPE's own words: "even 36 months post firm-drug entry, the majority of generic injectable
+       drugs are financially underwater."
+       Also: a small subset of entries earns a disproportionate share of revenue, so the AVERAGE
+       overstates what the MARGINAL entrant can expect. Work from the full distribution across all
+       three fixed-cost scenarios, not from the mean, and not from any single scenario.
+
+     THE HORIZON ROUGHLY LINES UP WITH THE CONTRACT TERM. ASPE's 36-month window is close to the
+     Senate draft's three-year minimum. Across the fixed-cost scenarios, an injectable entrant is
+     anywhere from comfortably ahead to barely returning anything by the time that term is up, and
+     in every scenario most individual products are still underwater. The term by itself therefore
+     does not pay; the PREMIUM has to. That is the quantitative form of the argument §5 already
+     makes in words. Note the limits: 36 months is where ASPE's SAMPLE ENDS, not a derived
+     horizon, and the scenarios are assumptions about fixed cost, not measurements of it.
+
+     ALSO: the brief says generics "lose money on roughly half" their products. ASPE puts 60-76%
+     of generic injectable entries underwater at 36 months. Your own source is stronger than your
+     claim — and specific to injectables. Consider upgrading the sentence.
+
+     >>> WHAT "FIXED COST" MEANS HERE — CHECK §3'S WORDING. ASPE's fixed cost scenarios come from
+     Eastern Research Group (2021), "Cost of Generic Drugs" (ASPE/ERG, aspe.hhs.gov). ERG models
+     the cost of DEVELOPING AND GETTING APPROVAL FOR a generic (ANDA) — fifteen development
+     stages, 8.82% opportunity cost of capital, eighteen product-pathway models including
+     injectable solutions. It does NOT model the capital cost of building a sterile line.
+     §3 currently says "annualized sterile line," which is plant capex. These are different
+     things and only one of them is sourceable.
+
+     WHAT THE BREAKEVEN CAN AND CANNOT SETTLE. ERG's numbers are about getting a drug approved,
+     not about building a plant. So this breakeven tests one thing: whether a manufacturer would
+     ENTER. It does not adjudicate the premium against the Hamilton loans on the cost of capital,
+     because the loans act on plant capex and nothing here measures plant capex. Say that in the
+     paper rather than letting the comparison imply more than the analysis supports.
+
+     RECOMMEND REFRAMING §3 to cost of ENTRY rather than plant capex, because that is the
+     participation decision you said the analysis is about, and ERG states the rule as an
+     equation: a generic applicant whose expected capitalized cost of development E(CC) is
+     $6.5M "will enter a given market, if the expected present value of revenues over the
+     lifetime of its generic, E(R), is $6.5 million or greater." E(R) >= E(CC) is your breakeven.
+     The premium raises E(R). ($6.5M is the SIMPLE ORAL example — $2.6M cash outlay capitalized
+     for failures and cost of capital. The injectable figure is in ERG Table A-6 and still needs
+     pulling.) YOUR CALL, not mine — it changes what §3 promises.
+
+     ALSO WORTH READING: Wosińska's written testimony to the Senate Finance Committee, 5 Dec 2023
+     (brookings.edu/wp-content/uploads/2023/12/Senate-Finance-Testimony-Final-12.5.2023.pdf).
+     She testified to the committee whose draft you defend, so it bears on §5 as well as §3.
+
+     HAMILTON: checked. The page carries $2B with no sizing, and partial loan forgiveness tied to
+     quality milestones. The full PDF would not parse here. My earlier claim that it "probably
+     contains the capital cost figures" was overstated — treat it as unconfirmed. -->
 
 ## 4. Figures
 
 <!-- One row per planned figure. Graphics are 10% of the rubric and the paper needs at least one
-     labeled figure. You have one already; two or three is a better target.
-     Each figure needs a claim it supports — a figure that decorates is a figure that gets cut. -->
+     labeled figure. Each figure needs a claim it supports — a figure that decorates is a figure
+     that gets cut. -->
 
 | # | Figure | Claim it supports | Data source | Built? |
 |---|---|---|---|---|
-| 1 | Median years in shortage, by drug type | | ASPE 2018–2023 | Data in brief, not yet rebuilt |
+| 1 | Median years in shortage, by drug type | Sterile capacity is slow and costly to stand up, so injectable shortages run 2.89× oral ones — which is why a multi-year volume commitment is what finances a line | ASPE 2018–2023 | Yes — [`analysis/figures/shortage-duration-by-drug-type.svg`](../../analysis/figures/shortage-duration-by-drug-type.svg) |
+| 2 | Breakeven: price uplift vs. annuitized line cost | The uplift needed is small relative to the shortage cost it prevents | §3 inputs, not yet sourced | No |
+
+<!-- A third figure is optional. The generic price-decline series would support pillar three, but
+     the 10–15% figure is time-bounded (see source-verification.md) and three scattered points
+     from a secondary source is not a series. It needs a real price index or it does not get built. -->
 
 ## 5. Recommendation
 
-<!-- 30% of the rubric — the largest single block, tied with analysis.
+**The policy.** Medicare should pay hospitals and physicians a reliability add-on for multi-year,
+meaningful-volume contracts with quality-vetted sterile-injectable manufacturers. The add-on applies
+only when the contract also names a qualified alternate manufacturer as a contingency source.
 
-     Which policy do you defend? The Senate Finance reliability premium, the Hamilton Project
-     loans-plus-stockpile package, a hybrid, or neither. Name it here, before the drafting, so the
-     paper argues toward something rather than arriving somewhere.
+**The strongest objection.** A premium locks in incumbents and gets administered by the same GPOs
+that created the race to the bottom. It could end up protecting margins without adding any capacity.
+The funding side, changes to Medicaid rebates, could also shift costs elsewhere in the system.
 
-     Then: the strongest objection to your choice, and how you answer it. Your brief already has
-     the objection (a premium locks in incumbents and is administered by the same intermediaries
-     that caused the problem). Your answer to it is the paper's spine. -->
+**My answer.** Paying nothing for reliability is also a price. It's just paid later, in rationed
+chemo doses instead of a line item.
+
+I chose the premium over the Hamilton loans because it goes after the cause. Generics lose money on
+about half their products, so a subsidized plant still sells into a price that doesn't cover it. A
+3+ year volume commitment is also what lets a manufacturer finance sterile capacity, so the premium
+covers the fixed-cost problem indirectly. The loans become setup.
+
+The condition answers lock-in. The premium only pays out when the contract includes a second
+qualified source, it is tied to auditable outcomes like fill rate and FDA inspection record rather
+than incumbency, and contracts are re-bid at term end.
+
+<!-- Claude's, 2026-09-20 — argument scaffolding, not your prose. Rewrite or cut.
+
+     WHAT THE PAPER DEFENDS, STATED ON PAGE ONE. The leading objection to the Senate draft is
+     that it does not actually buy reliability. The paper defends an amended version that does.
+     Say this early or a reviewer meets the Brookings critique first and assumes it was missed.
+
+     THE AMENDMENT IS A TIGHTENING, NOT AN INVENTION. This is the load-bearing point. The draft
+     ALREADY conditions payment on contingency contracts with alternate manufacturers — that came
+     out of your own 2026-09-20 bill check. So the amendment does not add the condition and must
+     not be described as doing so. What it adds is teeth: the alternate must be verified and
+     performing rather than merely named in a contract, and payment rides on auditable outcomes
+     (fill rate, inspection record) instead of the draft's process measures and lump-sum payments.
+     That is a far easier position to defend than proposing a new condition, because the drafters
+     already conceded the principle — the argument is that they wrote it in a form that cannot be
+     checked, which is precisely why Wosińska and Frank can say the program does not buy
+     reliability.
+
+     ON THE CRITICS. Wosińska and Frank wrote both the Hamilton loans-plus-stockpile proposal and
+     the Brookings critique of the Senate draft. Cite them as interested parties. Their own
+     proposal is not budget-neutral either, so the premium's cost cannot be a disqualifier for
+     mine and a detail for theirs — the same standard applies to their $2B.
+
+     UNVERIFIED: the "process measures and lump-sum payments" characterisation is white-paper
+     reading, same caveat as the rest of the funding work. -->
+
+**The funding half.** The Senate Finance draft lets the Secretary reduce or waive Medicaid inflation
+rebates for generics in shortage, and it bars participating hospitals from accepting 340B discounts on
+those drugs. The rebate waiver raises 340B ceiling prices, so part of the cost lands on 340B hospitals.
+I treat this as a funding cost and not a flaw in the premium itself. The draft names no offset, so my
+recommendation adds a requirement that the Secretary keep Medicaid whole.
+
+<!-- SETTLED 2026-09-20 against the May 2024 discussion draft; see source-verification.md. The
+     standing caveat is that the draft is not enacted text, so any bill number in the paper gets
+     checked against it first. -->
 
 ## 6. Success Criteria
 
@@ -101,5 +254,8 @@ courses: [BUS-620]
 
 ---
 
-_Skeleton drafted with Claude (2026-09-19); all content is mine, written before the research starts.
-See [prompt-log.md](../../prompt-log.md)._
+_Skeleton drafted with Claude (2026-09-19). My policy decision — §5 in full, §1's question, and
+§3's first paragraph — was written by me and transcribed by Claude (2026-09-20) with the prose
+unchanged. Claude's own words, to be rewritten or cut before this is final: §1's scope paragraph,
+§3's second and third paragraphs, §4's row 2, and every bracketed open item. §§2, 6, 7 remain
+mine to write. See [prompt-log.md](../../prompt-log.md)._
