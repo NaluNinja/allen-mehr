@@ -10,7 +10,7 @@ courses: [BUS-620]
 
 **Author:** Allen Mehr
 **Date:** 2026-09-20
-**Version:** 0.4 (draft — §§1, 2, 3, 5, 7 filled; §4 Figure 2 image export open; §6 open)
+**Version:** 0.5 (draft — §§1–5, 7 filled; §6 open)
 **Brief:** [`docs/briefs/research-brief.md`](../../docs/briefs/research-brief.md)
 **Verification:** [`source-verification.md`](./source-verification.md)
 
@@ -67,8 +67,8 @@ capital, because the loans act on plant capex and I don't measure that.
 COGS runs 42% of revenue for generic injectables, so contribution margin is 58%. A product clears its
 entry cost when 0.58 × revenue >= E(CC). For a product with 36-month revenue R, the required price
 uplift is u = E(CC)/R − 0.58. I report this as a curve, not a single number. The uplift depends on
-where a product sits in the revenue distribution, and ASPE only publishes that distribution in
-$100,000 increments.
+where a product sits in the revenue distribution, and ASPE doesn't publish one. Its only per-product
+distribution is of net profit, in $100,000 increments (ASPE Figure 4, p. 7).
 
 The figure has three limits, and I'm stating them next to it. It's a first-order bound. It doesn't
 discount within the 36-month window the way ASPE does at 8.82%. It treats the premium as pure margin,
@@ -100,7 +100,7 @@ Hamilton loans look better by comparison. I accept that as the result that would
 | # | Figure | Claim it supports | Data source | Built? |
 |---|---|---|---|---|
 | 1 | Median years in shortage, by drug type | Injectable shortages last nearly three times as long as oral ones, because sterile capacity is slow and expensive to stand up. That is why a multi-year volume commitment is what lets a manufacturer finance a line | ASPE 2018–2023 | Yes — [`analysis/figures/shortage-duration-by-drug-type.svg`](../../analysis/figures/shortage-duration-by-drug-type.svg) |
-| 2 | Required price uplift by product revenue — three lines for the low, medium and high E(CC) scenarios, with the 70%-underwater mark shown | What the premium costs depends on how far down the revenue distribution it has to reach. A flat add-on that rescues the median product does nothing for the tail | ASPE ROI brief (E(CC), COGS 42%) | Spreadsheet built — [`analysis/required-uplift-u.xlsx`](../../analysis/required-uplift-u.xlsx). Image export for the paper still to do. |
+| 2 | Required price uplift by product revenue — three lines for the low, medium and high E(CC) scenarios, with a dashed marker at the medium break-even revenue ($15.8M). ASPE's 70% underwater is measured on net profit, not revenue, so it stays in the text (ASPE p. 7) and is not drawn | What the premium costs depends on how far down the revenue distribution it has to reach. A flat add-on that rescues the median product does nothing for the tail | ASPE ROI brief (E(CC), COGS 42%) | Yes — [`analysis/figures/required-uplift-u.png`](../../analysis/figures/required-uplift-u.png), exported from [`analysis/required-uplift-u.xlsx`](../../analysis/required-uplift-u.xlsx) |
 
 <!-- A third figure is optional. The generic price-decline series would support pillar three, but
      the 10–15% figure is time-bounded (see source-verification.md) and three scattered points
@@ -186,7 +186,7 @@ recommendation adds a requirement that the Secretary keep Medicaid whole.
 | Policy choice (§1) | Me | Laid out the options and the counterarguments. Drafted a paragraph covering what is in and out of scope. | I decided the choice. I rewrote both paragraphs in my own words and changed anything I did not agree with. |
 | Sources (§2) | Me | Claude fetched the sources online and cross-referenced them. It then transcribed the figures I had verified. | I checked every ASPE figure line by line before it went in. |
 | Breakeven (§3) | Me. I built the spreadsheet from the formula and ASPE's inputs. | Drafted the surrounding text. Produced the same table independently from the same formula and inputs. | I compared the two row by row (75 cells) and they agreed. Because we used the same formula and the same inputs, this catches arithmetic and transcription errors only. It does not check the formula or the inputs themselves. |
-| Figures (§4) | Figure 2 is mine. | Built Figure 1 from ASPE's data and drafted the claim text for me to review. | I looked at each figure and confirmed, line by line, the values against the original source. |
+| Figures (§4) | Figure 2 is mine. I built the spreadsheet and the chart. | Built Figure 1 from ASPE's data and drafted the claim text for me to review. On Figure 2, Claude Code renamed the legend to the entry-cost scenarios and added the medium break-even marker. | I looked at each figure and confirmed, line by line, the values against the original source. I checked that the Figure 2 marker lands where the medium curve reaches zero. |
 | Recommendation (§5) | Me | Drafted the pass-through paragraph and the argument notes. | I rewrote them in my own words and own the argument. |
 | Disclosure | Me | Drafted this table. | I rewrote it in my own words and checked every line against the prompt log. |
 
@@ -195,4 +195,5 @@ recommendation adds a requirement that the Secretary keep Medicaid whole.
 _§7's table and the row 20 log entry were drafted by Claude (Cowork) on 2026-09-20 from my direction,
 and I've rewritten both. Claude (Cowork) also wrote replacement text for eight marked passages, which
 I rewrote. Claude Code's earlier wording now survives only in comments, not in the paper's prose. §6 is
-still mine to write. See [prompt-log.md](../../prompt-log.md)._
+still mine to write. On 2026-09-24 Claude Code corrected the §3 sentence on ASPE's distribution and
+updated the §4 Figure 2 row and the §7 Figures row, at my direction. See [prompt-log.md](../../prompt-log.md)._
