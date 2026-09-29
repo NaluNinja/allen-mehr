@@ -31,6 +31,9 @@ eyes on the primary source first. **Don't use** = contradicted, use the replacem
 | Senate draft funding | Medicaid inflation rebate can be reduced or waived "in the event of shortage risk" (press release). 340B certification and "no offset" are NOT in the press release; need the draft text. W&F corrected their own 340B reading on 2024-08-08 | Senate Finance press release, 2024-05-03; discussion draft | Rebate waiver Cleared; 340B and offset Check |
 | Contingency contracts | Draft requires "contingency contracts with alternate manufacturers" | Senate Finance press release, 2024-05-03 | Cleared |
 | W&F critique of the draft | Paying providers for contracting standards may not buy reliability; complexity may limit pass-through to manufacturers. Their fix: assess afterwards whether contracts deliver on time and pay on that. Close to my amendment, so credit it | Wosińska & Frank, Brookings, 2024-07-05 | Cleared |
+| GPO contracts for injectables | GPO contracts "commit manufacturers to a price but rarely carry a minimum quantity agreement"; hospitals "primarily consider the price" because they cannot observe quality | Wosińska & Frank 2023 (Hamilton web page; second quote also report p. 4) | Cleared |
+| W&F scoring details | Bonus payments scored on on-time delivery, verified with wholesaler data sent to ASPR Control Tower (p. 8); score adjusted for contracted products with GMP issues (p. 8); passthrough "self-regulating" (p. 5). Nothing on alternate manufacturers or re-bidding | Wosińska & Frank 2024 comment letter PDF | Cleared |
+| Senate draft targeting | Min. three-year contracts, volume commitments, contingency contracts with alternate manufacturers, quality-control transparency; drugs at high shortage risk | Senate Finance one-pager (file dated 05/01/24; released 2024-05-03) | Cleared |
 | MAC lists and price decline scope | MAC lists are "in the retail pharmacy setting"; 10–15% decline is "generic retail markets". For infused drugs use the same source's ASP formulas and DRG payments | Brookings (Rebitzer) | Cleared, with scope |
 | Dollar cost of shortages | Hospital labor $894,401,843 and 20,235,472 hours, calendar 2023, scaled up to all U.S. hospitals from 132 survey respondents. 2019 survey: $359,161,538 (so about 2.5x). Excludes secondary-distributor purchases and care delays, so a floor | Vizient 2025, pp. 3, 6, 13–14 | Cleared |
 | Secondary-distributor markup | About 214% above normal pre-shortage purchasing; range 25–600% | Vizient 2025, p. 12 | Cleared |
@@ -58,7 +61,7 @@ linking profitability to shortage risk" (p. 3).
 
 **Still to complete before the paper goes in:**
 - a full reference for the Senate Finance May 2024 discussion draft text (needed only if 340B or "no offset" stay in);
-- ASHP's shortage-statistics page for the 323 count, or cite Vizient 2025 p. 6 as the secondary source;
+- 323 count: cleared via AHA News, 2024-04-12 ("ASHP tracked a record 323 active drug shortages during the first quarter of 2024").
 - KFF Health News needs its full date and author.
 
 Closed 2026-09-28: Wosińska & Frank year (June 21, 2023), their 2024 critique, the FDA letter, a
