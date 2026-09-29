@@ -188,6 +188,7 @@ recommendation adds a requirement that the Secretary keep Medicaid whole.
 | Breakeven (§3) | Me. I built the spreadsheet from the formula and ASPE's inputs. | Drafted the surrounding text. Produced the same table independently from the same formula and inputs. | I compared the two row by row (75 cells) and they agreed. Because we used the same formula and the same inputs, this catches arithmetic and transcription errors only. It does not check the formula or the inputs themselves. |
 | Figures (§4) | Figure 2 is mine. I built the spreadsheet and the chart. | Built Figure 1 from ASPE's data and drafted the claim text for me to review. On Figure 2, Claude Code renamed the legend to the entry-cost scenarios and added the medium break-even marker. | I looked at each figure and confirmed, line by line, the values against the original source. I checked that the Figure 2 marker lands where the medium curve reaches zero. |
 | Recommendation (§5) | Me | Drafted the pass-through paragraph and the argument notes. | I rewrote them in my own words and own the argument. |
+| Paper prose (`drafts/`) | Me, every word. The assignment bars AI from drafting paper prose, even prose I then edit. | Claude Code critiques the draft: contradictions, wrong claims, arithmetic, citations, length. It verifies sources and updates the source sheet. | I write each fix myself and check any new number against the source sheet before it goes in. |
 | Disclosure | Me | Drafted this table. | I rewrote it in my own words and checked every line against the prompt log. |
 
 ---
@@ -196,4 +197,5 @@ _§7's table and the row 20 log entry were drafted by Claude (Cowork) on 2026-09
 and I've rewritten both. Claude (Cowork) also wrote replacement text for eight marked passages, which
 I rewrote. Claude Code's earlier wording now survives only in comments, not in the paper's prose. §6 is
 still mine to write. On 2026-09-24 Claude Code corrected the §3 sentence on ASPE's distribution and
-updated the §4 Figure 2 row and the §7 Figures row, at my direction. See [prompt-log.md](../../prompt-log.md)._
+updated the §4 Figure 2 row and the §7 Figures row, at my direction. On 2026-09-28 Claude Code added
+the §7 paper-prose row at my direction. See [prompt-log.md](../../prompt-log.md)._
