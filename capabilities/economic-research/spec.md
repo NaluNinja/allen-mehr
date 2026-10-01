@@ -88,8 +88,9 @@ not as a higher price. Market structure explains why one plant failing removes s
 replace.
 
 For §5 to hold, the analysis has to show that the uplift needed to make a sterile line viable is small
-next to the dollar cost of the shortages it prevents. If it isn't, the recommendation fails and the
-Hamilton loans look better by comparison. I accept that as the result that would change my answer.
+next to the dollar cost of the shortages it prevents. If the premium fails this test, not paying it is
+cheaper. The Hamilton loans are no fallback, since they cut plant costs rather than helping small
+products earn back their entry cost. I accept that as the result that would change my answer.
 
 ## 4. Figures
 
@@ -176,8 +177,10 @@ recommendation adds a requirement that the Secretary keep Medicaid whole.
      rather than sitting beside it. -->
 
 - [ ] Footnote the ASPE appendix ROI discrepancy, quoting main-body figures only.
-- [ ] 
-- [ ] 
+- [ ] The premium has to beat about $13 million per shortage. That's roughly $2.8 million a year in hospital labor, over the 4.6 years a typical injectable shortage lasts.
+- [ ] The premium tops out at the entry cost: $9.2 million per product in the medium scenario and $12.2 million in the high one. It can never be more than what it costs to bring the product to market.
+- [ ] At the full $9.2 million, more than 70% of enrolled products would have to be ones that would otherwise run short. For a $10 million product the premium is about $3.4 million, so roughly one in four is enough.
+- [ ] If we don't hit that share, not paying the premium wins, because it would cost more than the shortages it prevents. That's why I limit the add-on to drugs at high risk of shortage and pay it only on conditions.
 
 ## 7. AI Boundaries
 
