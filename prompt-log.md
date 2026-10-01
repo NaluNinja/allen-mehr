@@ -64,3 +64,17 @@ I approached verification as more than checking whether the model gave an answer
 One example involved the carrot marginal-cost result at 20 beds. My draft listed the marginal cost as $1,688.96 and stated that it was $405.05 below the $2,094 carrot price. I checked the subtraction myself: $2,094 minus $1,688.96 equals $405.04, not $405.05. I went back to the workbook to see whether the marginal-cost number or the stated difference was wrong. The workbook showed $1,688.95, which makes the $405.05 difference correct. Although the difference was only one cent, it mattered because the conclusion depends on whether the carrot cap stops production before marginal cost reaches the selling price.
 
 I also examined the unusual decline in marginal cost more closely. I initially withheld a general explanation because the crop patterns appeared different: tomato MC dipped once, while carrot and mesclun MC each dipped twice. Recomputing the schedules bed by bed showed that all three declines occurred at the same underlying event—the point at which production crossed the farmer’s 720 available field hours and shifted toward lower-cost temporary labor. A single crossing can produce either one or two visible dips depending on where the threshold falls within the crossing bed: tomato bed 5 was only 2.4 percent temporary-labor priced, while carrot bed 17 was 88.3 percent temporary-labor priced. The explanation I initially declined to generalize was therefore correct, but it became defensible only after recomputation. This reinforced that withholding an unsupported conclusion is not the same as testing it; apparent differences in output patterns must be verified against the underlying calculations.
+
+## Research Paper Reflection
+
+### 1. Facts from AI memory, not sources
+
+At the 17 September kickoff, Claude suggested figures from its own memory rather than from sources. I checked each claim against the source it cited and recorded the results in `source-verification.md` on 19 September. Several didn't hold up. The bill number doesn't exist; there is only a May 2024 discussion draft. The GPO reverse-auction mechanism appears nowhere in the cited source. The 10–15% price decline covered only 2017–18 and wasn't a lasting trend.
+
+### 2. The 70% "underwater" marker in Figure 2
+
+The figure spec planned to mark ASPE's 70% figure on the revenue chart and treated ASPE's data as a revenue distribution. When I checked page 7 of the ASPE report, I found that the 70% figure measures net profit, not revenue, so it had no place on a revenue axis. I dropped the marker, and Adam accepted the correction.
+
+### 3. The corrupted §3
+
+On 20 September, an automated edit in Claude Code removed text from §3 using positions it had calculated before an earlier change shifted them. It deleted a paragraph and a half of my writing and left notes stranded mid-sentence. I caught it because I asked to review the diff. That's why "show diffs before committing" became a standing rule in my workflow.
