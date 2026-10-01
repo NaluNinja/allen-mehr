@@ -1,4 +1,6 @@
-# Shortages of Cheap Generic Drugs: Cisplatin, Carboplatin, Amoxicillin, and IV Saline
+# Shortages of Cheap Generic Drugs: Cisplatin and Carboplatin
+
+_Title amended 2026-09-30 after the paper's scope narrowed to cisplatin and carboplatin (spec §1). The body below is the brief as written on 2026-09-17; its amoxicillin and IV saline material is out of scope, and its open corrections are listed in `capabilities/economic-research/source-verification.md`._
 
 ## Why now
 
